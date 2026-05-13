@@ -1,1762 +1,1041 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Shifting Focus · Lutra Health</title>
+<title>Strategic Reset 2026/27, Lutra Health</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Tokens, layout, components - unchanged from supplied source */
   :root {
-    --lutra-navy:       #001f54;
-    --lutra-navy-deep:  #00173f;
-    --lutra-blue:       #2c48ed;
-    --lutra-blue-hover: #2339c6;
-    --lutra-teal:       #01c7a9;
-    --lutra-lilac:      #eeedf4;
-    --lutra-blue-400:   #7c95f7;
-    --lutra-blue-200:   #c0d7ff;
-    --lutra-blue-100:   #e6eefe;
-    --lutra-ink-80:     #334b76;
-    --lutra-ink-60:     #667898;
-    --lutra-ink-40:     #99a5ba;
-    --lutra-ink-20:     #ccd2dc;
-    --lutra-ink-10:     #e6e9ee;
-    --lutra-ink-05:     #f3f4f7;
-    --lutra-bone:       #fafafb;
-    --connect-lilac:    #8b7dd8;
-    --connect-lilac-soft: #efecf9;
-    --connect-mint:     #d9f1e7;
-    --fg-1: #001f54; --fg-2: #334b76; --fg-3: #667898; --fg-4: #99a5ba; --fg-brand: #2c48ed;
-    --bg-1: #ffffff; --bg-2: #fafafb; --bg-3: #eeedf4; --bg-4: #f3f4f7;
-    --border-1: #e6e9ee; --border-2: #ccd2dc;
-    --success-soft: #d4f5ee; --warn-soft: #fef3e0;
-    --font-display: 'Manrope', ui-sans-serif, system-ui, sans-serif;
-    --font-body:    'Inter', ui-sans-serif, system-ui, sans-serif;
-    --radius-xs: 4px; --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px;
-    --radius-xl: 24px; --radius-2xl: 32px; --radius-pill: 999px;
-    --shadow-xs: 0 1px 2px rgba(0, 31, 84, 0.06);
-    --shadow-sm: 0 2px 4px rgba(0, 31, 84, 0.06), 0 1px 2px rgba(0, 31, 84, 0.04);
-    --shadow-md: 0 8px 20px -8px rgba(0, 31, 84, 0.12), 0 2px 6px rgba(0, 31, 84, 0.06);
-    --shadow-lg: 0 20px 40px -12px rgba(0, 31, 84, 0.18), 0 4px 10px rgba(0, 31, 84, 0.06);
-    --shadow-xl: 0 32px 64px -16px rgba(0, 31, 84, 0.22);
-    --shadow-brand: 0 12px 28px -8px rgba(44, 72, 237, 0.35);
-    --ring: 0 0 0 3px rgba(44, 72, 237, 0.25);
-    --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
-    --dur-fast: 120ms; --dur-base: 200ms; --dur-slow: 320ms;
+    --navy:        #001f54;
+    --navy-deep:   #00173f;
+    --blue:        #2c48ed;
+    --teal:        #01c7a9;
+    --lilac:       #eeedf4;
+    --ink:         #1a2238;
+    --ink-2:       #3d4866;
+    --ink-3:       #687894;
+    --ink-4:       #99a5ba;
+    --rule:        #d8dde6;
+    --rule-soft:   #eaedf2;
+    --paper:       #ffffff;
+    --paper-warm:  #faf9f6;
+    --paper-tint:  #f4f6fa;
+    --paper-rule:  #ecedf0;
+
+    --serif: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --sans:  'Inter', ui-sans-serif, system-ui, sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  html, body {
-    font-family: var(--font-body); font-size: 16px; line-height: 1.55;
-    color: var(--fg-2); background: var(--bg-1);
-    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-  }
-  body { min-height: 100vh; }
-  h1, h2, h3, h4, h5 {
-    font-family: var(--font-display); color: var(--fg-1); line-height: 1.15;
-    letter-spacing: -0.02em; text-wrap: balance;
-  }
-  p { text-wrap: pretty; }
-  img, svg { display: block; max-width: 100%; }
 
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-  .container-narrow { max-width: 940px; margin: 0 auto; padding: 0 32px; }
-  .section { padding: 112px 0; }
-  .section-sm { padding: 72px 0; }
+  body {
+    font-family: var(--sans);
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--paper-warm);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  /* ===== PAGE WRAPPER ===== */
+  .page {
+    background: var(--paper);
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 96px 88px;
+    border-left: 1px solid var(--paper-rule);
+    border-right: 1px solid var(--paper-rule);
+  }
+  @media (max-width: 800px) {
+    .page { padding: 56px 28px; }
+  }
+
+  /* ===== HEADING SYSTEM ===== */
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    color: var(--navy);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.025em; }
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 48px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--navy);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  h2 .sec-num {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    flex-shrink: 0;
+  }
+  h3 {
+    font-size: 16.5px;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: var(--navy);
+    letter-spacing: -0.005em;
+  }
+  h3 .sub-num {
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink-3);
+    margin-right: 8px;
+  }
+  h4 {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-2);
+    margin-top: 22px;
+    margin-bottom: 6px;
+  }
+
+  p { margin-bottom: 14px; max-width: 68ch; }
+  p + p { margin-top: 0; }
+
+  a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+
+  em { font-style: italic; }
+  strong { font-weight: 600; color: var(--ink); }
+
+  ul, ol { margin: 0 0 16px 24px; max-width: 68ch; }
+  li { margin-bottom: 4px; }
+
+  /* ===== COVER ===== */
+  .cover {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 64px;
+    margin-bottom: 48px;
+  }
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 12.5px;
+    font-family: var(--sans);
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .cover-top .ref { text-align: right; }
+  .cover-mid { display: flex; flex-direction: column; gap: 28px; align-items: flex-start; }
+  .cover-lockup { height: 56px; width: auto; display: block; }
+  .cover-lockup .lh-mark   { fill: var(--navy); }
+  .cover-lockup .lh-accent { fill: var(--blue); }
+  .cover-title {
+    font-family: var(--serif);
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--navy);
+    max-width: 18ch;
+  }
+  .cover-subtitle {
+    font-size: 17.5px;
+    color: var(--ink-2);
+    line-height: 1.4;
+    max-width: 50ch;
+  }
+  .cover-foot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--rule);
+  }
+  .cover-foot dt {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+    margin-bottom: 4px;
+  }
+  .cover-foot dd {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
   @media (max-width: 720px) {
-    .container, .container-narrow { padding: 0 20px; }
-    .section { padding: 72px 0; }
-    .section-sm { padding: 56px 0; }
+    .cover-foot { grid-template-columns: 1fr 1fr; }
+    .cover-title { font-size: 36px; }
   }
 
-  .bg-bone { background: var(--bg-2); }
-  .bg-lilac { background: var(--bg-3); }
-  .bg-navy { background: var(--lutra-navy); color: rgba(255,255,255,0.86); }
-  .bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4 { color: #fff; }
+  /* ===== CONTENTS ===== */
+  .contents {
+    margin: 48px 0 64px;
+    padding: 28px 32px;
+    background: var(--paper-warm);
+    border-left: 3px solid var(--navy);
+  }
+  .contents h4 { margin-top: 0; margin-bottom: 14px; color: var(--navy); }
+  .contents ol {
+    list-style: none;
+    margin: 0;
+    columns: 2;
+    column-gap: 40px;
+  }
+  .contents li {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    margin-bottom: 6px;
+    break-inside: avoid;
+  }
+  .contents li a { color: var(--ink); text-decoration: none; flex: 1; }
+  .contents li a:hover { color: var(--blue); }
+  .contents .c-num { color: var(--ink-3); font-variant-numeric: tabular-nums; flex-shrink: 0; min-width: 24px; }
+  @media (max-width: 680px) { .contents ol { columns: 1; } }
 
-  .site-header {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,0.82);
-    backdrop-filter: saturate(160%) blur(16px);
-    -webkit-backdrop-filter: saturate(160%) blur(16px);
-    border-bottom: 1px solid rgba(230,233,238,0.8);
+  /* ===== EXECUTIVE SUMMARY ===== */
+  .summary {
+    background: var(--paper-tint);
+    padding: 36px 40px;
+    border-radius: 4px;
+    margin: 16px 0 24px;
   }
-  .site-header-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 24px; padding: 16px 0;
-  }
-  .brand { display: inline-flex; align-items: center; text-decoration: none; color: var(--lutra-navy); }
-  .brand-logo { display: block; height: 32px; width: auto; }
-  .brand-logo .lh-mark   { fill: var(--lutra-navy); }
-  .brand-logo .lh-accent { fill: var(--lutra-blue); }
-  .site-footer .brand-logo .lh-mark   { fill: #ffffff; }
-  .site-footer .brand-logo .lh-accent { fill: var(--lutra-teal); }
-  .site-footer .brand-logo { height: 28px; }
-  .meta-tag {
-    font-family: var(--font-display); font-size: 12px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3);
-  }
+  .summary p { max-width: none; }
 
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: var(--font-display); font-size: 12px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--lutra-blue);
+  /* ===== CALLOUT ===== */
+  .callout {
+    background: var(--paper-warm);
+    border-left: 3px solid var(--blue);
+    padding: 20px 28px;
+    margin: 20px 0 24px;
+    max-width: 68ch;
   }
-  .eyebrow::before { content: ""; width: 18px; height: 1.5px; background: currentColor; display: inline-block; }
-  .eyebrow.teal { color: var(--lutra-teal); }
-  .eyebrow.inverse { color: var(--lutra-teal); }
-  .eyebrow.muted { color: var(--fg-3); }
+  .callout p { max-width: none; margin-bottom: 0; }
+  .callout p + p { margin-top: 10px; }
+  .callout em { color: var(--ink-2); }
 
-  .section-head { max-width: 760px; margin: 0 auto 64px; text-align: center; }
-  .section-head.left { text-align: left; margin: 0 0 56px; max-width: 820px; }
-  .section-head h2 {
-    font-size: clamp(34px, 4vw, 52px); font-weight: 800;
-    letter-spacing: -0.03em; line-height: 1.05; color: var(--fg-1);
+  /* ===== BLOCKQUOTE (email evidence) ===== */
+  blockquote {
     margin: 14px 0 18px;
+    padding: 16px 24px;
+    border-left: 3px solid var(--navy);
+    background: var(--paper-warm);
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    font-style: italic;
+    max-width: 64ch;
   }
-  .bg-navy .section-head h2 { color: #fff; }
-  .section-head p { font-size: 19px; color: var(--fg-2); line-height: 1.55; }
-  .bg-navy .section-head p { color: rgba(255,255,255,0.78); }
+  blockquote p { margin-bottom: 8px; max-width: none; }
+  blockquote p:last-child { margin-bottom: 0; }
+  blockquote .src {
+    display: block;
+    font-style: normal;
+    margin-top: 10px;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink-3);
+    letter-spacing: 0.02em;
+  }
 
-  .ref {
-    display: inline-flex; align-items: center; gap: 4px;
-    font-family: var(--font-display); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--lutra-blue); background: var(--lutra-blue-100);
-    padding: 3px 8px; border-radius: 999px; text-decoration: none;
-    margin-left: 6px; transition: all var(--dur-fast) var(--ease-out);
-    white-space: nowrap; vertical-align: 2px;
+  /* ===== TABLES ===== */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
   }
-  .ref:hover { background: var(--lutra-blue); color: #fff; }
-  .ref::after { content: "→"; font-size: 11px; }
+  .data-table caption {
+    text-align: left;
+    font-size: 13px;
+    color: var(--ink-3);
+    padding-bottom: 8px;
+    font-style: italic;
+  }
+  .data-table thead th {
+    text-align: left;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-2);
+    padding: 10px 14px;
+    border-bottom: 1.5px solid var(--navy);
+    background: var(--paper-warm);
+  }
+  .data-table thead th.num { text-align: right; }
+  .data-table tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+  }
+  .data-table tbody td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .data-table tbody tr:hover { background: var(--paper-warm); }
+  .data-table tbody td.label { font-weight: 600; color: var(--navy); }
+  .data-table tbody td .sub { display: block; color: var(--ink-3); font-size: 12.5px; margin-top: 2px; }
 
-  .hero { padding: 96px 0 88px; position: relative; overflow: hidden; }
-  .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 80px; align-items: center; }
-  @media (max-width: 920px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-    .hero { padding: 56px 0 64px; }
+  /* ===== HEADLINE FIGURES ===== */
+  .figures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 18px 0 24px;
   }
-  .hero h1 {
-    font-size: clamp(44px, 5.6vw, 76px); font-weight: 800;
-    letter-spacing: -0.035em; line-height: 1.02; color: var(--fg-1);
-    margin: 22px 0 24px;
+  @media (max-width: 720px) {
+    .figures { grid-template-columns: repeat(2, 1fr); }
   }
-  .hero h1 .accent { color: var(--lutra-blue); }
-  .hero h1 .underline { background-image: linear-gradient(transparent 70%, rgba(1,199,169,0.35) 70%); }
-  .hero .lede { font-size: 21px; line-height: 1.5; color: var(--fg-2); max-width: 56ch; }
-  .hero-stats { display: flex; flex-direction: column; gap: 18px; }
-  .stat-card {
-    background: #fff; border: 1px solid var(--border-1);
-    border-radius: var(--radius-lg); padding: 28px 30px; box-shadow: var(--shadow-sm);
+  .figure-cell {
+    padding: 20px 22px 18px;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule-soft);
+    border-radius: 4px;
   }
-  .stat-card.lilac { background: var(--lutra-lilac); border-color: transparent; }
-  .stat-card.navy { background: var(--lutra-navy); color: rgba(255,255,255,0.85); border-color: transparent; }
-  .stat-card.navy .stat-num { color: #fff; }
-  .stat-card.navy .stat-label { color: var(--lutra-teal); }
-  .stat-num {
-    font-family: var(--font-display); font-weight: 800; font-size: 44px;
-    line-height: 1; letter-spacing: -0.03em; color: var(--fg-1); margin-bottom: 8px;
+  .figure-cell .fig {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 6px;
   }
-  .stat-label {
-    font-family: var(--font-display); font-size: 12px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--lutra-blue);
+  .figure-cell .fig-label {
+    font-family: var(--sans);
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-3);
+    margin-bottom: 6px;
+  }
+  .figure-cell .fig-desc {
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.45;
+  }
+
+  /* ===== PARTNER STRIP ===== */
+  .partners {
+    margin: 24px 0 8px;
+    padding: 22px 28px;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule-soft);
+    border-radius: 4px;
+  }
+  .partners-head {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
     margin-bottom: 12px;
   }
-  .stat-card p { font-size: 14.5px; line-height: 1.5; color: var(--fg-2); }
-  .stat-card.navy p { color: rgba(255,255,255,0.75); }
-
-  .reframe { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
-  @media (max-width: 860px) { .reframe { grid-template-columns: 1fr; } }
-  .reframe-card {
-    background: #fff; border: 1px solid var(--border-1);
-    border-radius: var(--radius-xl); padding: 40px 38px; box-shadow: var(--shadow-sm);
-  }
-  .reframe-card.muted { background: var(--lutra-ink-05); border-color: transparent; box-shadow: none; }
-  .reframe-card h3 {
-    font-family: var(--font-display); font-size: 26px; font-weight: 700;
-    letter-spacing: -0.02em; line-height: 1.2; color: var(--fg-1);
-    margin: 14px 0 12px;
-  }
-  .reframe-card.muted h3 { color: var(--fg-3); }
-  .reframe-card.muted .eyebrow { color: var(--fg-3); }
-  .reframe-card p { font-size: 16px; line-height: 1.6; color: var(--fg-2); }
-  .reframe-card.muted p { color: var(--fg-3); }
-  .reframe-arrow {
-    display: inline-flex; width: 36px; height: 36px; border-radius: 999px;
-    background: var(--lutra-blue); color: #fff;
-    align-items: center; justify-content: center;
-    font-size: 18px; font-weight: 700; box-shadow: var(--shadow-brand); margin-bottom: 16px;
+  .partners-row {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.55;
   }
 
-  .walls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  @media (max-width: 1000px) { .walls { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 640px)  { .walls { grid-template-columns: 1fr; } }
-  .wall {
-    background: #fff; border: 1px solid var(--border-1);
-    border-radius: var(--radius-lg); padding: 30px 28px 28px;
-    box-shadow: var(--shadow-xs);
-    transition: box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
-    position: relative; display: flex; flex-direction: column;
-  }
-  .wall:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-  .wall-num {
-    font-family: var(--font-display); font-size: 13px; font-weight: 700;
-    color: var(--lutra-teal); letter-spacing: 0.04em; margin-bottom: 14px;
-  }
-  .wall h3 {
-    font-family: var(--font-display); font-size: 22px; font-weight: 700;
-    letter-spacing: -0.02em; line-height: 1.2; color: var(--fg-1); margin-bottom: 14px;
-  }
-  .wall p { font-size: 15px; line-height: 1.55; color: var(--fg-2); margin-bottom: 14px; }
-  .wall p:last-of-type { margin-bottom: 14px; }
-  .wall .pill {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: var(--lutra-blue-100); color: var(--lutra-blue-hover);
-    font-family: var(--font-display); font-size: 12px; font-weight: 600;
-    padding: 5px 11px; border-radius: 999px;
-    margin-top: auto; align-self: flex-start;
-  }
-  .wall .pill.teal { background: var(--success-soft); color: #00735e; }
-  .wall .pill.lilac { background: var(--lutra-lilac); color: var(--lutra-navy); }
-  .wall .pill .dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; }
+  /* ===== SECTION ===== */
+  .section { scroll-margin-top: 24px; }
 
-  .roi {
-    background: var(--lutra-navy); border-radius: var(--radius-2xl);
-    padding: 56px 56px; color: #fff;
-    display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center;
-    position: relative; overflow: hidden;
+  /* ===== FOOTNOTES ===== */
+  .footnotes {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--ink-2);
   }
-  @media (max-width: 820px) { .roi { grid-template-columns: 1fr; gap: 28px; padding: 40px 32px; } }
-  .roi::before {
-    content: ""; position: absolute; top: -120px; right: -120px;
-    width: 360px; height: 360px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(1,199,169,0.18), transparent 65%);
-    pointer-events: none;
+  .footnotes ol { margin-left: 18px; }
+  .footnotes li { margin-bottom: 8px; line-height: 1.55; }
+  a.fn {
+    font-size: 0.78em;
+    vertical-align: super;
+    line-height: 0;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1px;
   }
-  .roi-num {
-    font-family: var(--font-display);
-    font-size: clamp(72px, 10vw, 128px); font-weight: 800;
-    line-height: 0.9; letter-spacing: -0.04em;
-    color: var(--lutra-teal); position: relative;
-  }
-  .roi-num span {
-    color: rgba(255,255,255,0.5); font-weight: 500;
-    font-size: 0.4em; vertical-align: top; margin-left: 6px; letter-spacing: 0;
-  }
-  .roi-text h3 {
-    font-family: var(--font-display);
-    font-size: clamp(22px, 2.6vw, 30px); font-weight: 700;
-    color: #fff; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 14px;
-  }
-  .roi-text p { font-size: 16.5px; line-height: 1.6; color: rgba(255,255,255,0.78); max-width: 56ch; }
-  .roi-text .ref { background: rgba(255,255,255,0.1); color: var(--lutra-teal); margin-left: 0; margin-top: 16px; }
-  .roi-text .ref:hover { background: var(--lutra-teal); color: var(--lutra-navy); }
+  a.fn:hover { text-decoration: underline; }
 
-  .nations { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  @media (max-width: 820px) { .nations { grid-template-columns: 1fr; } }
-  .nation {
-    background: #fff; border: 1px solid var(--border-1);
-    border-radius: var(--radius-xl); padding: 38px 36px 32px;
-    box-shadow: var(--shadow-sm); position: relative;
+  /* ===== DOC FOOTER ===== */
+  .doc-footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--ink-3);
+    font-family: var(--sans);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
-  .nation-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 16px; }
-  .nation h3 {
-    font-family: var(--font-display); font-size: 28px; font-weight: 800;
-    letter-spacing: -0.02em; line-height: 1.1; color: var(--fg-1); margin-top: 6px;
-  }
-  .nation .status {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-family: var(--font-display); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 6px 11px; border-radius: 999px; flex-shrink: 0; white-space: nowrap;
-  }
-  .status.amber { background: #fef3e0; color: #a86a10; }
-  .status.red   { background: #fde8ea; color: #a83b3f; }
-  .status.blue  { background: var(--lutra-blue-100); color: var(--lutra-blue-hover); }
-  .status.teal  { background: var(--success-soft); color: #00735e; }
-  .nation p { font-size: 15.5px; line-height: 1.6; color: var(--fg-2); margin-bottom: 12px; }
-  .nation p:last-of-type { margin-bottom: 0; }
-  .nation strong { color: var(--fg-1); font-weight: 600; }
-  .nation-foot {
-    margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border-1);
-    font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--lutra-blue);
-    display: flex; justify-content: space-between; align-items: center; gap: 10px;
-  }
-  .nation-foot span::before { content: "→"; margin-right: 8px; }
+  .doc-footer .ver { font-weight: 600; }
 
-  .pivot { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  @media (max-width: 860px) { .pivot { grid-template-columns: 1fr; } }
-  .pivot-card {
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius-xl); padding: 40px 38px;
-    color: rgba(255,255,255,0.85);
-    transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
-  }
-  .pivot-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); }
-  .pivot-card .eyebrow { color: var(--lutra-teal); }
-  .pivot-card h3 {
-    font-family: var(--font-display); font-size: 28px; font-weight: 700;
-    letter-spacing: -0.02em; line-height: 1.2; color: #fff; margin: 16px 0 16px;
-  }
-  .pivot-card p { font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.78); margin-bottom: 14px; }
-  .pivot-card ul { list-style: none; padding: 0; margin: 18px 0 0; }
-  .pivot-card li {
-    display: flex; align-items: flex-start; gap: 10px; padding: 8px 0;
-    font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.82);
-  }
-  .pivot-card li::before {
-    content: ""; width: 5px; height: 5px; border-radius: 999px; background: var(--lutra-teal);
-    margin-top: 9px; flex-shrink: 0;
-  }
-  .pivot-card .ref { background: rgba(1,199,169,0.15); color: var(--lutra-teal); margin-left: 0; margin-top: 18px; }
-  .pivot-card .ref:hover { background: var(--lutra-teal); color: var(--lutra-navy); }
-
-  .connect-intro {
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius-2xl); padding: 48px 48px; margin-bottom: 32px;
-    display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center;
-  }
-  @media (max-width: 920px) { .connect-intro { grid-template-columns: 1fr; gap: 36px; padding: 36px 32px; } }
-  .connect-intro .eyebrow { color: var(--lutra-teal); }
-  .connect-intro h3 {
-    font-family: var(--font-display); font-size: clamp(28px, 3.4vw, 38px); font-weight: 800;
-    letter-spacing: -0.025em; line-height: 1.1; color: #fff; margin: 14px 0 14px;
-  }
-  .connect-intro p { font-size: 16.5px; line-height: 1.6; color: rgba(255,255,255,0.82); margin-bottom: 12px; }
-  .connect-intro p:last-child { margin-bottom: 0; }
-  .connect-logo-frame {
-    background: #ffffff; border-radius: var(--radius-xl); padding: 44px 36px;
-    display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);
-  }
-  .connect-logo { display: flex; flex-direction: column; align-items: center; gap: 14px; }
-  .connect-logo-mark { display: flex; gap: 6px; }
-  .connect-logo-mark .dot { width: 56px; height: 56px; border-radius: 50%; background: var(--lutra-navy); }
-  .connect-logo-word {
-    font-family: var(--font-display); font-weight: 800; font-size: 26px;
-    letter-spacing: -0.04em; color: var(--lutra-navy); text-transform: lowercase;
-  }
-
-  .connective-layer {
-    background: #ffffff; border-radius: var(--radius-2xl);
-    padding: 56px 48px 48px; margin-bottom: 32px;
-    box-shadow: var(--shadow-sm); border: 1px solid var(--border-1);
-  }
-  .connective-layer-head { text-align: center; margin-bottom: 36px; }
-  .connective-layer-head .eyebrow { color: var(--lutra-blue); justify-content: center; }
-  .connective-layer-head h3 {
-    font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); font-weight: 700;
-    letter-spacing: -0.02em; line-height: 1.2; color: var(--fg-1);
-    margin-top: 12px; max-width: 36ch; margin-left: auto; margin-right: auto;
-  }
-  .connective-diagram {
-    display: grid; grid-template-columns: 1fr auto 1fr auto 1fr;
-    align-items: center; gap: 0; max-width: 920px; margin: 0 auto;
-  }
-  @media (max-width: 760px) {
-    .connective-diagram { grid-template-columns: 1fr; gap: 16px; }
-    .connective-diagram .conn-link { display: none; }
-  }
-  .conn-node {
-    background: #ffffff; border: 1.5px solid var(--lutra-ink-20);
-    border-radius: var(--radius-lg); padding: 26px 22px; text-align: center;
-    min-height: 160px; display: flex; flex-direction: column;
-    justify-content: center; align-items: center; gap: 10px;
-  }
-  .conn-node.center {
-    background: var(--lutra-navy); border-color: var(--lutra-navy);
-    color: #fff; min-height: 180px; box-shadow: var(--shadow-md);
-  }
-  .conn-node-label {
-    font-family: var(--font-display); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3);
-  }
-  .conn-node.center .conn-node-label { color: var(--lutra-teal); }
-  .conn-node h4 {
-    font-family: var(--font-display); font-size: 18px; font-weight: 700;
-    color: var(--fg-1); letter-spacing: -0.01em; line-height: 1.25;
-  }
-  .conn-node.center h4 { color: #fff; font-size: 22px; }
-  .conn-node p { font-size: 13.5px; line-height: 1.45; color: var(--fg-3); margin-top: 4px; }
-  .conn-node.center p { color: rgba(255,255,255,0.75); font-size: 14px; }
-  .conn-node-mini-mark { display: flex; gap: 4px; margin-bottom: 4px; }
-  .conn-node-mini-mark .d { width: 18px; height: 18px; border-radius: 50%; background: var(--lutra-teal); }
-  .conn-link { display: flex; flex-direction: column; gap: 8px; padding: 0 14px; }
-  .conn-link .line { width: 56px; height: 2px; background: var(--connect-lilac); border-radius: 2px; }
-  .connective-outcome { text-align: center; margin-top: 32px; }
-  .connective-outcome .pill {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--connect-mint); color: #00735e;
-    font-family: var(--font-display); font-size: 13px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 10px 18px; border-radius: 999px;
-  }
-  .connective-outcome .pill::before { content: "✓"; font-size: 14px; }
-
-  .principle { text-align: center; max-width: 880px; margin: 0 auto; }
-  .principle .quote-mark {
-    font-family: var(--font-display); font-size: 64px;
-    color: var(--lutra-teal); line-height: 0.5; margin-bottom: 18px;
-  }
-  .principle h2 {
-    font-size: clamp(28px, 3.6vw, 44px); font-weight: 700;
-    letter-spacing: -0.025em; line-height: 1.2; color: var(--fg-1);
-  }
-  .principle h2 .accent { color: var(--lutra-blue); }
-  .principle h2 .teal { color: var(--lutra-teal); }
-  .principle .sig {
-    margin-top: 32px; font-family: var(--font-display);
-    font-size: 12px; font-weight: 700; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--fg-3);
-  }
-
-  .divider-band {
-    background: var(--lutra-navy); color: #fff; padding: 56px 0 64px;
-    text-align: left; position: relative; overflow: hidden;
-  }
-  .divider-band::before {
-    content: ""; position: absolute; bottom: -160px; right: -120px;
-    width: 380px; height: 380px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(1,199,169,0.15), transparent 65%);
-  }
-  .divider-band h2 {
-    font-family: var(--font-display); font-size: clamp(34px, 4vw, 52px);
-    font-weight: 800; letter-spacing: -0.03em; line-height: 1.05;
-    color: #fff; margin: 14px 0 18px; max-width: 26ch;
-  }
-  .divider-band p {
-    font-size: 18px; color: rgba(255,255,255,0.78);
-    line-height: 1.55; max-width: 60ch; margin-bottom: 36px;
-  }
-
-  /* Updated for 6 appendices: 3 cols × 2 rows on desktop */
-  .appendix-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px; position: relative; z-index: 2;
-  }
-  @media (max-width: 720px) {
-    .appendix-nav { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 480px) {
-    .appendix-nav { grid-template-columns: 1fr; }
-  }
-  .appendix-nav a {
-    text-decoration: none; background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md);
-    padding: 18px 18px;
-    transition: all var(--dur-fast) var(--ease-out); display: block;
-  }
-  .appendix-nav a:hover {
-    background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.28); transform: translateY(-2px);
-  }
-  .appendix-nav .label {
-    font-family: var(--font-display); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.16em; text-transform: uppercase; color: var(--lutra-teal);
-    margin-bottom: 8px;
-  }
-  .appendix-nav .title {
-    font-family: var(--font-display); font-weight: 700; font-size: 15px;
-    color: #fff; line-height: 1.3; letter-spacing: -0.01em;
-  }
-
-  .appendix {
-    padding: 96px 0 88px; border-bottom: 1px solid var(--border-1);
-    scroll-margin-top: 80px;
-  }
-  .appendix.bone { background: var(--bg-2); }
-  .appendix.lilac { background: var(--bg-3); }
-  .appendix-head { margin-bottom: 48px; max-width: 820px; }
-  .appendix-head .label {
-    font-family: var(--font-display); font-size: 12px; font-weight: 800;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--lutra-teal); margin-bottom: 14px;
-  }
-  .appendix-head h2 {
-    font-family: var(--font-display); font-size: clamp(30px, 3.6vw, 46px);
-    font-weight: 800; letter-spacing: -0.025em; line-height: 1.1;
-    color: var(--fg-1); margin-bottom: 16px;
-  }
-  .appendix-head .summary {
-    font-size: 18px; color: var(--fg-2); line-height: 1.55; max-width: 64ch;
-  }
-  .appendix-head .summary strong { color: var(--fg-1); font-weight: 600; }
-
-  .tayside-results { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
-  @media (max-width: 880px) { .tayside-results { grid-template-columns: repeat(2, 1fr); } }
-  .ts-stat {
-    background: #fff; border-radius: var(--radius-lg);
-    padding: 30px 26px 28px; border: 1px solid var(--border-1); box-shadow: var(--shadow-xs);
-  }
-  .ts-stat .figure {
-    font-family: var(--font-display); font-size: 48px; font-weight: 800;
-    line-height: 1; color: var(--lutra-blue); letter-spacing: -0.03em; margin-bottom: 12px;
-  }
-  .ts-stat .figure.teal { color: var(--lutra-teal); }
-  .ts-stat .figure.navy { color: var(--lutra-navy); }
-  .ts-stat .figure.amber { color: #a86a10; }
-  .ts-stat .label {
-    font-family: var(--font-display); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); margin-bottom: 8px;
-  }
-  .ts-stat .desc { font-size: 14px; line-height: 1.45; color: var(--fg-2); }
-
-  .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 28px; }
-  @media (max-width: 820px) { .evidence-grid { grid-template-columns: 1fr; } }
-  .evidence-block {
-    background: #fff; border: 1px solid var(--border-1);
-    border-radius: var(--radius-lg); padding: 32px 30px; box-shadow: var(--shadow-xs);
-  }
-  .evidence-block.lilac { background: var(--lutra-lilac); border-color: transparent; }
-  .evidence-block.amber {
-    background: #fef9f1; border-color: transparent; border-left: 4px solid #d18a30;
-  }
-  .evidence-block h4 {
-    font-family: var(--font-display); font-size: 18px; font-weight: 700;
-    letter-spacing: -0.01em; color: var(--fg-1); margin-bottom: 14px;
-  }
-  .evidence-block p { font-size: 15px; line-height: 1.6; color: var(--fg-2); margin-bottom: 12px; }
-  .evidence-block p:last-child { margin-bottom: 0; }
-  .evidence-block ul { list-style: none; padding: 0; margin: 0; }
-  .evidence-block li {
-    display: flex; align-items: flex-start; gap: 10px;
-    padding: 6px 0; font-size: 14.5px; line-height: 1.5; color: var(--fg-2);
-  }
-  .evidence-block li strong { color: var(--fg-1); font-weight: 600; }
-  .evidence-block li::before {
-    content: ""; width: 5px; height: 5px; border-radius: 999px;
-    background: var(--lutra-teal); margin-top: 9px; flex-shrink: 0;
-  }
-
-  .tracks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 36px; }
-  @media (max-width: 980px) { .tracks { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 540px) { .tracks { grid-template-columns: 1fr; } }
-  .track {
-    background: #fff; border: 1px solid var(--border-1);
-    border-radius: var(--radius-lg); padding: 24px 22px 22px;
-    box-shadow: var(--shadow-xs); display: flex; flex-direction: column; gap: 10px;
-  }
-  .track .track-status {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-family: var(--font-display); font-size: 10px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    padding: 4px 9px; border-radius: 999px; align-self: flex-start;
-    background: #fde8ea; color: #a83b3f;
-  }
-  .track h4 {
-    font-family: var(--font-display); font-size: 16px; font-weight: 700;
-    color: var(--fg-1); letter-spacing: -0.01em; line-height: 1.3;
-  }
-  .track p { font-size: 13.5px; line-height: 1.5; color: var(--fg-2); }
-  .track .track-actor {
-    font-family: var(--font-display); font-size: 11px; font-weight: 600;
-    letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg-3);
-    margin-top: auto; padding-top: 8px; border-top: 1px dashed var(--border-1);
-  }
-
-  .testimonial {
-    background: #fff; border-radius: var(--radius-xl); padding: 36px 36px 32px;
-    border-left: 4px solid var(--lutra-teal); box-shadow: var(--shadow-sm); margin-bottom: 16px;
-  }
-  .testimonial.lilac { background: var(--lutra-lilac); border-left-color: var(--lutra-blue); }
-  .testimonial blockquote {
-    font-family: var(--font-display); font-size: 19px; line-height: 1.45;
-    color: var(--fg-1); font-weight: 500; letter-spacing: -0.01em; margin-bottom: 18px;
-  }
-  .testimonial blockquote::before {
-    content: "“"; color: var(--lutra-teal); font-size: 38px; line-height: 0;
-    vertical-align: -10px; margin-right: 4px;
-  }
-  .testimonial .attribution {
-    font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--fg-3);
-  }
-  .testimonial .attribution strong {
-    color: var(--fg-1); display: block; margin-bottom: 2px; font-weight: 700;
-  }
-
-  .timeline { position: relative; padding-left: 0; }
-  .timeline-item {
-    background: #fff; border: 1px solid var(--border-1);
-    border-radius: var(--radius-lg); padding: 28px 30px 26px;
-    margin-bottom: 16px; box-shadow: var(--shadow-xs); position: relative;
-  }
-  .timeline-item.dark { background: var(--lutra-navy); color: rgba(255,255,255,0.86); border-color: transparent; }
-  .timeline-item.dark .ti-head { color: var(--lutra-teal); }
-  .timeline-item.dark .ti-meta { color: rgba(255,255,255,0.55); }
-  .timeline-item.dark h4 { color: #fff; }
-  .timeline-item.dark p { color: rgba(255,255,255,0.78); }
-  .timeline-item.dark .quote { color: rgba(255,255,255,0.92); border-left-color: var(--lutra-teal); }
-  .ti-head {
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 10px;
-    font-family: var(--font-display); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--lutra-blue); margin-bottom: 12px;
-  }
-  .ti-meta { color: var(--fg-4); font-weight: 600; letter-spacing: 0.08em; }
-  .timeline-item h4 {
-    font-family: var(--font-display); font-size: 19px; font-weight: 700;
-    color: var(--fg-1); margin-bottom: 10px; letter-spacing: -0.01em; line-height: 1.3;
-  }
-  .timeline-item p { font-size: 15px; line-height: 1.6; color: var(--fg-2); margin-bottom: 10px; }
-  .timeline-item p:last-child { margin-bottom: 0; }
-  .timeline-item .quote {
-    font-style: italic; color: var(--fg-1);
-    border-left: 3px solid var(--lutra-blue);
-    padding: 12px 16px; margin: 12px 0;
-    font-size: 14.5px; line-height: 1.55;
-    background: var(--lutra-ink-05);
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  }
-  .timeline-item.dark .quote { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.94); }
-  .timeline-item .quote .src {
-    display: block; font-style: normal; margin-top: 8px;
-    font-family: var(--font-display); font-size: 12px; font-weight: 600;
-    letter-spacing: 0.04em; color: var(--fg-3);
-  }
-  .timeline-item.dark .quote .src { color: rgba(255,255,255,0.6); }
-
-  .verdict {
-    background: var(--lutra-navy); color: #fff;
-    border-radius: var(--radius-xl); padding: 36px 36px; margin-top: 32px;
-  }
-  .verdict .label {
-    font-family: var(--font-display); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.16em; text-transform: uppercase; color: var(--lutra-teal); margin-bottom: 12px;
-  }
-  .verdict h4 {
-    font-family: var(--font-display); font-size: 24px; font-weight: 700;
-    letter-spacing: -0.015em; line-height: 1.25; color: #fff; margin-bottom: 12px;
-  }
-  .verdict p { font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.82); }
-
-  .note {
-    background: var(--lutra-blue-100); border-radius: var(--radius-md);
-    padding: 16px 22px; margin-top: 20px;
-    font-size: 14.5px; line-height: 1.55; color: var(--lutra-navy);
-    border-left: 3px solid var(--lutra-blue);
-  }
-  .note strong { font-weight: 700; }
-  .note.amber { background: #fef3e0; color: #5c3a00; border-left-color: #d18a30; }
-
-  .back-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-family: var(--font-display); font-size: 12px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--fg-3); text-decoration: none; margin-top: 32px;
-    transition: color var(--dur-fast) var(--ease-out);
-  }
-  .back-link:hover { color: var(--lutra-blue); }
-  .back-link::before { content: "↑"; font-size: 13px; }
-
-  .site-footer {
-    background: var(--lutra-navy-deep); color: rgba(255,255,255,0.7);
-    padding: 56px 0 36px;
-  }
-  .site-footer-inner {
-    display: flex; justify-content: space-between; align-items: center;
-    gap: 24px; flex-wrap: wrap;
-    font-size: 13px; color: rgba(255,255,255,0.55); font-family: var(--font-display);
-  }
-  .site-footer .brand { color: #fff; }
-
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(14px); }
-    to   { opacity: 1; transform: none; }
-  }
-  .reveal { animation: fadeInUp 0.7s var(--ease-out) both; }
-  .reveal.d1 { animation-delay: 0.05s; }
-  .reveal.d2 { animation-delay: 0.15s; }
-  .reveal.d3 { animation-delay: 0.25s; }
 </style>
 </head>
 <body>
-  <!-- ========== HEADER ========== -->
-  <header class="site-header">
-    <div class="container site-header-inner">
-      <a class="brand" href="#top" aria-label="Lutra Health">
-        <svg class="brand-logo" viewBox="0 0 911.5 273.9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <path class="lh-mark" d="M79.2,194.6V86.7h13v95h48.3v12.9H79.2z"/>
-          <path class="lh-mark" d="M145.5,165.3v-47.8h12.9v44.9c0,3.9,1,7.5,2.9,10.6c1.9,3.2,4.5,5.7,7.7,7.6c3.2,1.9,6.7,2.8,10.6,2.8 c3.9,0,7.4-0.9,10.6-2.8c3.2-1.9,5.7-4.4,7.6-7.6c1.9-3.2,2.9-6.7,2.9-10.6v-44.9h13l0.1,77.1h-13l-0.1-9.8 c-2.7,3.6-6.2,6.5-10.3,8.6c-4.2,2.1-8.7,3.2-13.5,3.2c-5.8,0-11-1.4-15.8-4.2c-4.8-2.8-8.5-6.6-11.3-11.3 C146.9,176.4,145.5,171.1,145.5,165.3z"/>
-          <path class="lh-mark" d="M265.9,130.5h-17.5l-0.1,64.1h-13l0.1-64.1h-13.3v-12.9h13.3l-0.1-24.2h13l0.1,24.2h17.5V130.5z"/>
-          <path class="lh-mark" d="M276.6,194.6v-77.1h12.9v9.6c2.7-3.6,6.2-6.5,10.3-8.6c4.2-2.1,8.7-3.2,13.6-3.2c3,0,5.9,0.4,8.6,1.2l-5.2,12.9 c-2.1-0.7-4.2-1-6.2-1c-3.9,0-7.4,0.9-10.6,2.8c-3.2,1.9-5.8,4.4-7.7,7.6c-1.9,3.2-2.9,6.7-2.9,10.6v45.1H276.6z"/>
-          <path class="lh-mark" d="M386.6,117.5h12.9v77.1h-12.9l-0.5-13c-2.4,4.5-5.7,8.1-10,10.9c-4.2,2.8-9.3,4.2-15.1,4.2 c-5.7,0-10.9-1.1-15.9-3.2c-4.9-2.1-9.3-5.1-13.1-8.9c-3.8-3.8-6.7-8.1-8.8-13.1c-2.1-4.9-3.2-10.3-3.2-16c0-5.5,1-10.7,3.1-15.6 c2.1-4.9,4.9-9.2,8.6-12.8c3.7-3.7,7.9-6.6,12.8-8.6c4.8-2.1,10-3.1,15.6-3.1c6.1,0,11.4,1.4,16,4.3c4.6,2.9,8.3,6.5,11.1,11.1 L386.6,117.5z M360.7,184c5.1,0,9.5-1.2,13.2-3.7c3.7-2.5,6.6-5.9,8.6-10.1c2-4.3,3-9,3-14.1c0-5.2-1-10-3.1-14.2 c-2.1-4.2-4.9-7.6-8.7-10.1c-3.7-2.5-8.1-3.7-13.1-3.7c-5.1,0-9.7,1.3-13.9,3.8c-4.2,2.5-7.5,5.9-9.9,10.1c-2.4,4.2-3.7,9-3.7,14.1 c0,5.2,1.3,9.9,3.8,14.1c2.5,4.2,5.9,7.6,10,10.1C351.2,182.8,355.7,184,360.7,184z"/>
-          <path class="lh-accent" d="M482.1,86.7H495v107.9h-12.9v-51.3h-53.4v51.3h-12.9V86.7h12.9v43.6h53.4V86.7z"/>
-          <path class="lh-accent" d="M546.8,196.6c-7.1,0-13.6-1.8-19.4-5.5c-5.8-3.6-10.5-8.5-14-14.7c-3.5-6.1-5.2-12.9-5.2-20.4 c0-5.7,1-10.9,3-15.8c2-4.9,4.8-9.2,8.3-12.9c3.5-3.7,7.6-6.6,12.3-8.7c4.7-2.1,9.7-3.2,15-3.2c5.8,0,11.1,1.2,16,3.5 c4.9,2.3,9,5.6,12.5,9.8c3.5,4.2,6.1,9,7.8,14.5c1.7,5.5,2.4,11.4,1.9,17.7h-62.9c0.6,4.4,2.1,8.3,4.3,11.7c2.3,3.4,5.2,6.1,8.7,8.1 c3.5,2,7.4,3,11.8,3.1c4.6,0,8.8-1.2,12.6-3.6c3.8-2.4,6.8-5.7,9.1-9.8l13.2,3.1c-3.1,6.8-7.7,12.4-14,16.8 C561.5,194.4,554.5,196.6,546.8,196.6z M521.7,150.6h50.3c-0.4-4.3-1.8-8.3-4.2-11.8c-2.4-3.6-5.4-6.4-9-8.6 c-3.6-2.2-7.6-3.2-11.9-3.2s-8.3,1.1-11.9,3.2c-3.6,2.1-6.6,4.9-8.9,8.5C523.7,142.2,522.2,146.2,521.7,150.6z"/>
-          <path class="lh-accent" d="M662.6,117.5h12.9v77.1h-12.9l-0.5-13c-2.4,4.5-5.7,8.1-10,10.9c-4.2,2.8-9.3,4.2-15.1,4.2 c-5.7,0-10.9-1.1-15.9-3.2c-4.9-2.1-9.3-5.1-13.1-8.9c-3.8-3.8-6.7-8.1-8.8-13.1c-2.1-4.9-3.2-10.3-3.2-16c0-5.5,1-10.7,3.1-15.6 c2.1-4.9,4.9-9.2,8.6-12.8c3.7-3.7,7.9-6.6,12.8-8.6c4.8-2.1,10-3.1,15.6-3.1c6.1,0,11.4,1.4,16,4.3c4.6,2.9,8.3,6.5,11.1,11.1 L662.6,117.5z M636.7,184c5.1,0,9.5-1.2,13.2-3.7c3.7-2.5,6.6-5.9,8.6-10.1c2-4.3,3-9,3-14.1c0-5.2-1-10-3.1-14.2 c-2.1-4.2-4.9-7.6-8.7-10.1c-3.7-2.5-8.1-3.7-13.1-3.7c-5.1,0-9.7,1.3-13.9,3.8c-4.2,2.5-7.5,5.9-9.9,10.1c-2.4,4.2-3.7,9-3.7,14.1 c0,5.2,1.3,9.9,3.8,14.1c2.5,4.2,5.9,7.6,10,10.1C627.2,182.8,631.8,184,636.7,184z"/>
-          <path class="lh-accent" d="M685.6,194.6V79h13v115.6H685.6z"/>
-          <path class="lh-accent" d="M753.8,130.5h-17.5l-0.1,64.1h-13l0.1-64.1h-13.3v-12.9h13.3l-0.1-24.2h13l0.1,24.2h17.5V130.5z"/>
-          <path class="lh-accent" d="M832.7,146.7v47.9h-13v-45.1c0-3.9-1-7.5-2.9-10.6c-1.9-3.2-4.4-5.7-7.6-7.6c-3.2-1.9-6.7-2.8-10.6-2.8 c-3.9,0-7.4,0.9-10.6,2.8c-3.2,1.9-5.8,4.4-7.7,7.6c-1.9,3.2-2.9,6.7-2.9,10.6v45.1h-13V79h13v48.2c2.7-3.6,6.2-6.5,10.3-8.6 c4.2-2.1,8.7-3.2,13.6-3.2c5.8,0,11,1.4,15.8,4.2c4.8,2.8,8.5,6.6,11.3,11.3C831.3,135.6,832.7,140.9,832.7,146.7z"/>
-          <path class="lh-accent" d="M852,196.6c-2,0-3.6-0.7-5-2.1s-2-3.1-2-5.1c0-1.9,0.7-3.5,2-4.9s3-2.1,5-2.1c2,0,3.7,0.7,5.1,2.1 s2.1,3,2.1,4.9c0,2-0.7,3.7-2.1,5.1S854.1,196.6,852,196.6z"/>
-        </svg>
-      </a>
-      <span class="meta-tag">Strategic Briefing &middot; 2026/27</span>
+
+<div class="page">
+
+<!-- ========== COVER ========== -->
+<section class="cover">
+
+  <div class="cover-mid">
+    <div>
+      <svg class="cover-lockup" viewBox="0 0 911.5 273.9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path class="lh-mark" d="M79.2,194.6V86.7h13v95h48.3v12.9H79.2z"/>
+        <path class="lh-mark" d="M145.5,165.3v-47.8h12.9v44.9c0,3.9,1,7.5,2.9,10.6c1.9,3.2,4.5,5.7,7.7,7.6c3.2,1.9,6.7,2.8,10.6,2.8 c3.9,0,7.4-0.9,10.6-2.8c3.2-1.9,5.7-4.4,7.6-7.6c1.9-3.2,2.9-6.7,2.9-10.6v-44.9h13l0.1,77.1h-13l-0.1-9.8 c-2.7,3.6-6.2,6.5-10.3,8.6c-4.2,2.1-8.7,3.2-13.5,3.2c-5.8,0-11-1.4-15.8-4.2c-4.8-2.8-8.5-6.6-11.3-11.3 C146.9,176.4,145.5,171.1,145.5,165.3z"/>
+        <path class="lh-mark" d="M265.9,130.5h-17.5l-0.1,64.1h-13l0.1-64.1h-13.3v-12.9h13.3l-0.1-24.2h13l0.1,24.2h17.5V130.5z"/>
+        <path class="lh-mark" d="M276.6,194.6v-77.1h12.9v9.6c2.7-3.6,6.2-6.5,10.3-8.6c4.2-2.1,8.7-3.2,13.6-3.2c3,0,5.9,0.4,8.6,1.2l-5.2,12.9 c-2.1-0.7-4.2-1-6.2-1c-3.9,0-7.4,0.9-10.6,2.8c-3.2,1.9-5.8,4.4-7.7,7.6c-1.9,3.2-2.9,6.7-2.9,10.6v45.1H276.6z"/>
+        <path class="lh-mark" d="M386.6,117.5h12.9v77.1h-12.9l-0.5-13c-2.4,4.5-5.7,8.1-10,10.9c-4.2,2.8-9.3,4.2-15.1,4.2 c-5.7,0-10.9-1.1-15.9-3.2c-4.9-2.1-9.3-5.1-13.1-8.9c-3.8-3.8-6.7-8.1-8.8-13.1c-2.1-4.9-3.2-10.3-3.2-16c0-5.5,1-10.7,3.1-15.6 c2.1-4.9,4.9-9.2,8.6-12.8c3.7-3.7,7.9-6.6,12.8-8.6c4.8-2.1,10-3.1,15.6-3.1c6.1,0,11.4,1.4,16,4.3c4.6,2.9,8.3,6.5,11.1,11.1 L386.6,117.5z M360.7,184c5.1,0,9.5-1.2,13.2-3.7c3.7-2.5,6.6-5.9,8.6-10.1c2-4.3,3-9,3-14.1c0-5.2-1-10-3.1-14.2 c-2.1-4.2-4.9-7.6-8.7-10.1c-3.7-2.5-8.1-3.7-13.1-3.7c-5.1,0-9.7,1.3-13.9,3.8c-4.2,2.5-7.5,5.9-9.9,10.1c-2.4,4.2-3.7,9-3.7,14.1 c0,5.2,1.3,9.9,3.8,14.1c2.5,4.2,5.9,7.6,10,10.1C351.2,182.8,355.7,184,360.7,184z"/>
+        <path class="lh-accent" d="M482.1,86.7H495v107.9h-12.9v-51.3h-53.4v51.3h-12.9V86.7h12.9v43.6h53.4V86.7z"/>
+        <path class="lh-accent" d="M546.8,196.6c-7.1,0-13.6-1.8-19.4-5.5c-5.8-3.6-10.5-8.5-14-14.7c-3.5-6.1-5.2-12.9-5.2-20.4 c0-5.7,1-10.9,3-15.8c2-4.9,4.8-9.2,8.3-12.9c3.5-3.7,7.6-6.6,12.3-8.7c4.7-2.1,9.7-3.2,15-3.2c5.8,0,11.1,1.2,16,3.5 c4.9,2.3,9,5.6,12.5,9.8c3.5,4.2,6.1,9,7.8,14.5c1.7,5.5,2.4,11.4,1.9,17.7h-62.9c0.6,4.4,2.1,8.3,4.3,11.7c2.3,3.4,5.2,6.1,8.7,8.1 c3.5,2,7.4,3,11.8,3.1c4.6,0,8.8-1.2,12.6-3.6c3.8-2.4,6.8-5.7,9.1-9.8l13.2,3.1c-3.1,6.8-7.7,12.4-14,16.8 C561.5,194.4,554.5,196.6,546.8,196.6z M521.7,150.6h50.3c-0.4-4.3-1.8-8.3-4.2-11.8c-2.4-3.6-5.4-6.4-9-8.6 c-3.6-2.2-7.6-3.2-11.9-3.2s-8.3,1.1-11.9,3.2c-3.6,2.1-6.6,4.9-8.9,8.5C523.7,142.2,522.2,146.2,521.7,150.6z"/>
+        <path class="lh-accent" d="M662.6,117.5h12.9v77.1h-12.9l-0.5-13c-2.4,4.5-5.7,8.1-10,10.9c-4.2,2.8-9.3,4.2-15.1,4.2 c-5.7,0-10.9-1.1-15.9-3.2c-4.9-2.1-9.3-5.1-13.1-8.9c-3.8-3.8-6.7-8.1-8.8-13.1c-2.1-4.9-3.2-10.3-3.2-16c0-5.5,1-10.7,3.1-15.6 c2.1-4.9,4.9-9.2,8.6-12.8c3.7-3.7,7.9-6.6,12.8-8.6c4.8-2.1,10-3.1,15.6-3.1c6.1,0,11.4,1.4,16,4.3c4.6,2.9,8.3,6.5,11.1,11.1 L662.6,117.5z M636.7,184c5.1,0,9.5-1.2,13.2-3.7c3.7-2.5,6.6-5.9,8.6-10.1c2-4.3,3-9,3-14.1c0-5.2-1-10-3.1-14.2 c-2.1-4.2-4.9-7.6-8.7-10.1c-3.7-2.5-8.1-3.7-13.1-3.7c-5.1,0-9.7,1.3-13.9,3.8c-4.2,2.5-7.5,5.9-9.9,10.1c-2.4,4.2-3.7,9-3.7,14.1 c0,5.2,1.3,9.9,3.8,14.1c2.5,4.2,5.9,7.6,10,10.1C627.2,182.8,631.8,184,636.7,184z"/>
+        <path class="lh-accent" d="M685.6,194.6V79h13v115.6H685.6z"/>
+        <path class="lh-accent" d="M753.8,130.5h-17.5l-0.1,64.1h-13l0.1-64.1h-13.3v-12.9h13.3l-0.1-24.2h13l0.1,24.2h17.5V130.5z"/>
+        <path class="lh-accent" d="M832.7,146.7v47.9h-13v-45.1c0-3.9-1-7.5-2.9-10.6c-1.9-3.2-4.4-5.7-7.6-7.6c-3.2-1.9-6.7-2.8-10.6-2.8 c-3.9,0-7.4,0.9-10.6,2.8c-3.2,1.9-5.8,4.4-7.7,7.6c-1.9,3.2-2.9,6.7-2.9,10.6v45.1h-13V79h13v48.2c2.7-3.6,6.2-6.5,10.3-8.6 c4.2-2.1,8.7-3.2,13.6-3.2c5.8,0,11,1.4,15.8,4.2c4.8,2.8,8.5,6.6,11.3,11.3C831.3,135.6,832.7,140.9,832.7,146.7z"/>
+        <path class="lh-accent" d="M852,196.6c-2,0-3.6-0.7-5-2.1s-2-3.1-2-5.1c0-1.9,0.7-3.5,2-4.9s3-2.1,5-2.1c2,0,3.7,0.7,5.1,2.1 s2.1,3,2.1,4.9c0,2-0.7,3.7-2.1,5.1S854.1,196.6,852,196.6z"/>
+      </svg>
     </div>
-  </header>
+    <h1 class="cover-title">Strategic Reset.<br>2026/27.</h1>
+    <p class="cover-subtitle">The case for shifting Lutra Health's primary commercial focus away from the NHS, what three years of structured engagement produced and where the company is heading next.</p>
+  </div>
 
-  <span id="top"></span>
+  <dl class="cover-foot">
+    <div><dt>Prepared by</dt><dd>Charles Solanki<br><span style="color: var(--ink-3); font-weight: 400; font-size: 13px;">Chief Executive Officer</span></dd></div>
+    <div><dt>Distribution</dt><dd>Investor Director<br><span style="color: var(--ink-3); font-weight: 400; font-size: 13px;">Board members</span></dd></div>
+    <div><dt>Status</dt><dd>For information &amp;<br>discussion</dd></div>
+    <div><dt>Date</dt><dd>13 May 2026<br><span style="color: var(--ink-3); font-weight: 400; font-size: 13px;">Version 2.0</span></dd></div>
+  </dl>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="reveal d1">
-          <span class="eyebrow">Strategic Reset</span>
-          <h1>
-            Why we're <span class="accent">shifting focus</span> away from the NHS as our <span class="underline">primary market</span>.
-          </h1>
-          <p class="lede">
-            Three years of structured NHS engagement have built genuine domain expertise, a robust evidence base, and a verified business case. They have not, however, translated into scaled adoption. This is the honest account of what we learned, why the NHS market is structurally harder than it looks - and where Lutra is heading next.
-          </p>
-        </div>
-        <aside class="hero-stats reveal d2">
-          <div class="stat-card">
-            <div class="stat-label">Time invested</div>
-            <div class="stat-num">3 yrs</div>
-            <p>Of structured NHS engagement - national contracts, ICB tenders, innovation networks, regulatory alignment.</p>
-          </div>
-          <div class="stat-card lilac">
-            <div class="stat-label">Verified by NHS BI</div>
-            <div class="stat-num" style="color: var(--lutra-blue);">8&times; ROI</div>
-            <p>Independent NHS Business Intelligence has verified Lutra delivers more than 8&times; return - and we've still struggled to gain traction.</p>
-          </div>
-          <div class="stat-card navy">
-            <div class="stat-label">New focus</div>
-            <div class="stat-num">2 markets</div>
-            <p>Optometry &amp; private ophthalmology - where adoption is driven by usability and revenue, not mandate.</p>
-          </div>
-        </aside>
-      </div>
+</section>
+
+<!-- ========== CONTENTS ========== -->
+<nav class="contents">
+  <h4>Contents</h4>
+  <ol>
+    <li><span class="c-num">1.</span><a href="#s1">Executive summary</a></li>
+    <li><span class="c-num">2.</span><a href="#s2">Background</a></li>
+    <li><span class="c-num">3.</span><a href="#s3">Structural barriers to NHS adoption</a></li>
+    <li><span class="c-num">4.</span><a href="#s4">Engagement record across the four nations</a></li>
+    <li><span class="c-num">5.</span><a href="#s5">NHS Tayside, the evidence base</a></li>
+    <li><span class="c-num">6.</span><a href="#s6">The strategic shift</a></li>
+    <li><span class="c-num">7.</span><a href="#s7">Companion brief and outstanding work</a></li>
+    <li><span class="c-num">8.</span><a href="#s8">Open questions and parked items</a></li>
+    <li><span class="c-num">A.</span><a href="#a-a">Appendix A · NHS Tayside outcomes</a></li>
+    <li><span class="c-num">B.</span><a href="#a-b">Appendix B · Scotland engagement record</a></li>
+    <li><span class="c-num">C.</span><a href="#a-c">Appendix C · NHS Somerset engagement record</a></li>
+    <li><span class="c-num">D.</span><a href="#a-d">Appendix D · NHS Devon engagement record</a></li>
+    <li><span class="c-num">E.</span><a href="#a-e">Appendix E · Competitive landscape</a></li>
+    <li><span class="c-num">F.</span><a href="#a-f">Appendix F · Financial projections (forthcoming)</a></li>
+  </ol>
+</nav>
+
+<!-- ========== 1 EXECUTIVE SUMMARY ========== -->
+<section class="section" id="s1">
+
+  <h2><span class="sec-num">1</span>Executive summary</h2>
+
+  <div class="summary">
+    <p>Lutra Health is shifting its primary commercial focus away from the NHS. Three years of structured engagement built a strong evidence base, including a verified eight-times return on investment from the NHS Tayside deployment, but did not produce scaled adoption. The conclusion is not that the NHS no longer matters; it is that the NHS cannot serve as the primary engine of growth for a company at our stage. New NHS opportunities will continue to be welcomed; they will not define the roadmap.</p>
+
+    <p>Six structural barriers explain the pattern. The principal ones are the requirement for simultaneous buy-in from Trust, ICB and Local Optical Committee with frequently misaligned incentives; the political and financial gravity of point solutions such as AI scribes which absorb available NHS digital funding; the change fatigue and embedded incumbency around existing Single Point of Access (SPoA) platforms; and the way large EPR rollouts override every other digital priority within a Trust. The four-nation engagement record in Section 4 illustrates each of these in operational detail.</p>
+
+    <p>The new commercial focus is the optometry and private ophthalmology markets, with Lutra Connect as the product line. Adoption in both is driven by usability and revenue rather than mandate, and the company already has thirty optometry practices and five private consultant ophthalmologists active on the platform. The integration roadmap (Semble live, Ocuco signed, Topcon, Medisoft, Compucare and Carebit in discussion) supports distribution into both markets without per-site procurement.</p>
+
+    <p>This briefing is the companion paper to the Lutra Connect Launch Briefing of the same date. Where the Connect briefing covers the commercial plan, pricing, market sizing, defensibility, integrations and launch sequence, this briefing covers the strategic rationale for the shift away from the NHS as primary market and the engagement evidence behind it. The two should be read together.</p>
+  </div>
+
+</section>
+
+<!-- ========== 2 BACKGROUND ========== -->
+<section class="section" id="s2">
+
+  <h2><span class="sec-num">2</span>Background</h2>
+
+  <h3><span class="sub-num">2.1</span>What we attempted, 2023 to early 2026</h3>
+  <p>From founding through to the start of 2026, Lutra Health pursued an NHS-led commercial strategy. The reasoning was straightforward at the time. The NHS is the dominant payer in UK eye care; cataract is one of the most over-subscribed pathways in any specialty; the Tayside deployment, covered in Section 5 and Appendix A, produced outcomes strong enough to merit national rollout consideration. We treated the NHS as both the proving ground and the primary commercial route.</p>
+
+  <p>That direction shaped three years of operational work. The company invested in national contract submissions in Wales and Scotland; in Trust-level engagement at Somerset, Devon, Moorfields and others; in ICB conversations; in NHS innovation network submissions; in compliance and governance work to meet NHS procurement requirements; and in clinical evidence generation alongside NHS Tayside Business Intelligence.</p>
+
+  <h3><span class="sub-num">2.2</span>What was produced</h3>
+  <p>The three years produced substantial assets. The Tayside deployment generated verified outcomes including a twenty-five per cent reduction in referral-to-treatment time, a sixty-three per cent reduction in referral-to-listing time, £241.60 of cost avoidance per patient and a satisfaction score of 4.7 / 5. NHS Business Intelligence verified the eight-times return on investment. Senior clinical advocates including John Ellis at NHS Tayside championed the platform publicly. The company developed working relationships with NHS innovation teams in Scotland and senior management at Trusts in England.</p>
+
+  <h3><span class="sub-num">2.3</span>What was not produced</h3>
+  <p>Scaled adoption. The Wales national contract did not land. The Scotland submission was closed by the Centre for Sustainable Delivery in November 2025 and the position was reconfirmed in January 2026. The Somerset opportunity, where the clinical and management teams were positive, has been paused indefinitely by the Trust's Digital Projects Team while Epic embeds. The Devon partnership, signed in February 2025 with Royal Devon University Healthcare NHS FT, has produced no launched project across four parallel workstreams after fourteen months. Section 4 and Appendices B to D provide the detail.</p>
+
+  <p>The pattern across these is consistent. Product fit has not been the binding constraint. Structural factors in the buyer have.</p>
+
+  <h3><span class="sub-num">2.4</span>Why this paper now</h3>
+  <p>This briefing sets out the formal reasoning for moving NHS-led growth from the centre of the commercial strategy to a continued but secondary track. The companion document, the Lutra Connect Launch Briefing of the same date, sets out the positive commercial plan into the new primary markets. The Investor Director and board are the intended readership.</p>
+
+</section>
+
+<!-- ========== 3 STRUCTURAL BARRIERS ========== -->
+<section class="section" id="s3">
+
+  <h2><span class="sec-num">3</span>Structural barriers to NHS adoption</h2>
+
+  <p>Six factors recur across the engagement record. Each is solvable in isolation. Together they have absorbed more time, capital and roadmap concessions than the resulting traction can justify for a company at our stage.</p>
+
+  <h3><span class="sub-num">3.1</span>Multi-stakeholder coordination with misaligned incentives</h3>
+  <p>Pathway change with Lutra requires alignment between three buyer types simultaneously. The Trust is the hospital department that will receive structured referrals; the ICB holds the budget for the commissioned pathway; the LOC represents the optometry side at the local level. All three must be aligned before a contract can be issued, and all three operate on different cycles and different financial pressures.</p>
+
+  <p>The current financial picture makes this harder than at any point in recent years. ICBs are absorbing redundancies and budget cuts in the current period. Incentives between the buyers also misalign in a structural way. Trusts want to recover income from ICB-commissioned activity; ICBs are simultaneously trying to reduce that spend. A small healthtech vendor cannot resolve a payer-provider tension of this kind by demonstrating a more efficient pathway.</p>
+
+  <h3><span class="sub-num">3.2</span>Point solutions own the political zeitgeist and the available budget</h3>
+  <p>AI scribes and similar point tools can sell directly to a single Trust on a straightforward ROI argument with far fewer stakeholders. They are also where political attention sits at the centre and in NHS England, with the result that the available NHS digital funding is being directed toward AI-related suppliers. A pathway-level proposition such as Lutra's competes for a much smaller residual pool of funding and attention.</p>
+
+  <h3><span class="sub-num">3.3</span>NHS-wide budget cuts blunt even a verified business case</h3>
+  <p>The Lutra business case is independently verified by NHS Business Intelligence at more than eight-times return. The Tayside data shows £241.60 of cost avoidance per cataract patient and a 25 per cent reduction in referral-to-treatment time. The headline number is not the constraint. The financial environment around it is. Where capacity and funding are described as already exhausted, as the Centre for Sustainable Delivery stated to Lutra in November 2025 (Appendix B), a strong ROI case is necessary but not sufficient to open a route.</p>
+
+  <h3><span class="sub-num">3.4</span>SPoA fragmentation and change fatigue</h3>
+  <p>The Single Point of Access (SPoA) category in NHS England is fragmented. Some ICBs run lighter referral systems such as EyeV as their SPoA. Others, such as Devon, have niche local SPoAs (the Devon Referral Support Service, DRSS) that are deeply embedded in operational workflow and require integration rather than replacement. Other regions sit on Cinapsis or on CrossCover at Moorfields.</p>
+
+  <p>Cinapsis and EyeV are referral systems, not Advice &amp; Guidance platforms. They overlap with one part of Lutra's footprint, the structured referral flow, but not with the same-day consultant opinion workflow that sits at the core of Lutra Connect. Even so, where one of them is already in place, considerable political capital has gone into the adoption, and the appetite for a further system change is minimal even where Lutra is functionally superior. This change fatigue is a structural factor, not a narrative one.</p>
+
+  <h3><span class="sub-num">3.5</span>The tender process favours scale and certification posture</h3>
+  <p>Even where stakeholder buy-in is achieved across Trust, ICB and LOC, awards run through tender. In that process competitors with more existing NHS traction and the relevant compliance certification (ISO 27001, ISO 9001) are structurally advantaged. Lutra is currently without both certifications. The NHS Wales national contract is the worked example: Lutra did the foundational engagement and the certification posture of other bidders won the contract. The Wales tender is expected to re-open within six months and Lutra will re-apply with a sharper compliance position; the structural lesson is recorded here.</p>
+
+  <h3><span class="sub-num">3.6</span>EPR rollouts override every other signal</h3>
+  <p>Large EPR rollouts within a Trust can foreclose every other digital project for a multi-year period. The cleanest illustration is NHS Somerset, where ophthalmology buy-in, clinical service lead endorsement, an under-procurement-threshold price point and a fully Lutra-led implementation model were all in place. None of it overrode the Director of Commercial Development's confirmation, citing the Solutions Development Manager for the Digital Projects Team, that the Trust has no capacity to consider any new digital systems until Epic is fully embedded. The realistic timeline is two or more years. Appendix C reproduces the relevant correspondence.</p>
+
+</section>
+
+<!-- ========== 4 FOUR NATIONS ========== -->
+<section class="section" id="s4">
+
+  <h2><span class="sec-num">4</span>Engagement record across the four nations</h2>
+
+  <p>Each devolved system imposed a different form of structural lock-in. Read together, they show that even where there is genuine clinical interest, system-level commitments elsewhere keep the door closed.</p>
+
+  <h3><span class="sub-num">4.1</span>England</h3>
+  <p>NHS England is fundamentally fragmented in this market. Each ICB operates differently, and many have already adopted either Primary Eyecare Services (PES) along with its associated optometry referral system, or one of Cinapsis or EyeV. The addressable market in NHS England therefore shrinks ICB by ICB before Lutra enters the room.</p>
+
+  <p>PES sits at the centre of community eye-care commissioning across a significant share of the country. The natural commercial route into community-optometry-to-ophthalmology referrals at scale would have been a PES partnership. Through 2025 the company explored this, including the possibility of offering PES an equity position to convert the relationship into partnership. The proposal was held back: PES had already begun building its own platform internally and was no longer in the market for an external provider. Appendix E sets out the position in more detail.</p>
+
+  <p>Stance: NHS England engagement continues opportunistically where it surfaces through clinical advocates or specific Trusts. It is no longer resourced as a primary growth channel.</p>
+
+  <h3><span class="sub-num">4.2</span>Wales</h3>
+  <p>The first NHS Wales national contract did not land for Lutra. The process taught the company a great deal about ISO requirements and NHS procurement mechanics. The tender is expected to re-open within the next six months and Lutra will re-apply, with a sharper compliance posture and the Tayside evidence base now substantially richer than at the previous submission.</p>
+
+  <p>Stance: re-apply, with the ISO 27001 / 9001 question pursued in parallel (Section 8).</p>
+
+  <h3><span class="sub-num">4.3</span>Scotland</h3>
+  <p>The NHS Scotland Innovation Team was supportive of Lutra throughout 2025. The block came from NHS Scotland's Centre for Sustainable Delivery (CfSD), specifically the Ophthalmic Workforce, for two reasons. First, current Scottish policy directs optometry referrals through SCI Gateway. Second, NHS Scotland is actively driving adoption of OpenEyes, procured pre-COVID for a Scotland-wide rollout that has not yet meaningfully embedded but is under growing political pressure to do so.</p>
+
+  <p>Lutra submitted Tayside outcomes data via the national innovation portal in late 2025. The submission was closed by the CfSD National Eyecare workstream on the grounds of capacity and funding. Lutra responded with a gainshare counter-offer designed to remove the funding objection (no upfront cost, payment linked to verified appointment savings, the Board retaining the majority of the benefit). Following the gainshare offer and the additional Tayside data on referral-to-treatment time, the Chief Optometric Adviser to the Scottish Government confirmed that the previous position still held. Subsequent investigation into the OpenEyes contract structure established that the forthcoming re-tender is for OpenEyes maintenance specifically: a category that, as open-source software, only one provider can fulfil. Appendix B reproduces the correspondence.</p>
+
+  <p>Stance: high-effort, low-return; deprioritise until the OpenEyes rollout settles or visibly fails.</p>
+
+  <h3><span class="sub-num">4.4</span>Northern Ireland</h3>
+  <p>Lutra engaged the lead ophthalmologist and the eye-care delivery lead in Northern Ireland in late 2025. Both were genuinely interested. The constraint was timing: Northern Ireland had recently adopted SCI Gateway for optometry referrals and Epic as the hospital EPR, with the integration newly live. Despite Lutra's lower cost and broader functional footprint, the lead ophthalmologist did not want to introduce further system change to her clinical and admin teams during the current transition. Available change capacity, not product merit, was the deciding factor.</p>
+
+  <p>Stance: hold; revisit when the Epic and SCI Gateway transition settles.</p>
+
+</section>
+
+<!-- ========== 5 TAYSIDE EVIDENCE ========== -->
+<section class="section" id="s5">
+
+  <h2><span class="sec-num">5</span>NHS Tayside, the evidence base</h2>
+
+  <p>NHS Tayside is the single deployment that underpins Lutra's clinical and economic case. The summary in this section is sufficient for board-level reading; the operational detail sits in Appendix A.</p>
+
+  <h3><span class="sub-num">5.1</span>Method</h3>
+  <p>The pilot ran across the whole of Tayside from August 2024, covering 1,570 cataract patients across 11 optometry practices including every Specsavers in the region and several independents. A matched-control subgroup of 209 Lutra patients and 209 non-Lutra patients (referred via SCI Gateway) was analysed jointly with the NHS Tayside Business Intelligence team over a 29-month period.</p>
+
+  <h3><span class="sub-num">5.2</span>Headline outcomes</h3>
+
+  <div class="figures">
+    <div class="figure-cell">
+      <div class="fig-label">Patients</div>
+      <div class="fig">1,570</div>
+      <div class="fig-desc">Cataract patients seen through Lutra at NHS Tayside from August 2024 onward.</div>
     </div>
-  </section>
-
-  <!-- ========== REFRAME ========== -->
-  <section class="section bg-lilac">
-    <div class="container">
-      <div class="section-head left">
-        <span class="eyebrow">The reframing</span>
-        <h2>This is a shift in focus - not a step away.</h2>
-        <p>We have invested significant time in the NHS over the past three years. The conclusion isn't that the NHS doesn't matter - it's that it can't be the primary engine of our growth at our current stage. New NHS opportunities will continue to be welcomed and supported. They will not, however, define the roadmap.</p>
-      </div>
-
-      <div class="reframe reveal">
-        <div class="reframe-card muted">
-          <span class="eyebrow muted">Where we have been</span>
-          <h3>NHS-led growth as the central thesis.</h3>
-          <p>National contracts, ICB tenders, innovation networks. Product roadmap shaped by NHS compliance, governance and procurement frameworks - often at the cost of speed and simplicity.</p>
-        </div>
-        <div class="reframe-card">
-          <div class="reframe-arrow">&rarr;</div>
-          <span class="eyebrow">Where we're going</span>
-          <h3>Optometrist-led pull, with NHS opportunities welcomed alongside.</h3>
-          <p>Lutra becomes the easiest and most valuable system optometrists use to communicate with ophthalmology - across both private and NHS markets. NHS engagement continues, but it no longer dictates direction.</p>
-        </div>
-      </div>
+    <div class="figure-cell">
+      <div class="fig-label">RTT reduction</div>
+      <div class="fig">25%</div>
+      <div class="fig-desc">Reduction in referral-to-treatment time versus SCI Gateway control (107 days).</div>
     </div>
-  </section>
-
-  <!-- ========== THE WALLS ========== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head left">
-        <span class="eyebrow">01 / The structural reality</span>
-        <h2>Six structural barriers that make NHS adoption disproportionately hard.</h2>
-        <p>Each of these is solvable in isolation. Stacked together, they have absorbed more time, capital and roadmap concessions than the resulting traction can justify for a company at our stage.</p>
-      </div>
-
-      <div class="walls">
-
-        <article class="wall reveal d1">
-          <div class="wall-num">01</div>
-          <h3>Multi-stakeholder buy-in is required, with misaligned incentives.</h3>
-          <p>Pathway change with Lutra isn't a sale to a Trust, an ICB, or an LOC - it requires <strong>all three</strong> aligned simultaneously. ICBs are reeling under redundancies and budget cuts, and the underlying incentives don't agree: Trusts want additional revenue from ICBs; ICBs are trying to reduce it. <a href="#appendix-d" class="ref">Devon case</a></p>
-          <span class="pill"><span class="dot"></span>Coordination cost</span>
-        </article>
-
-        <article class="wall reveal d1">
-          <div class="wall-num">02</div>
-          <h3>Point solutions own the political zeitgeist - and the budget.</h3>
-          <p>AI scribes can sell directly to a Trust on a simple ROI with far fewer stakeholders. They are also where the political attention sits - meaning the available NHS digital funding is being siphoned toward AI-related suppliers. Lutra is not in that zeitgeist.</p>
-          <span class="pill teal"><span class="dot"></span>Budget gravity</span>
-        </article>
-
-        <article class="wall reveal d1">
-          <div class="wall-num">03</div>
-          <h3>NHS-wide budget cuts blunt even a verified business case.</h3>
-          <p>Our business case has been independently verified by NHS Business Intelligence at <strong>greater than 8&times; ROI</strong>. Even with that, traction has been hard to manufacture against the prevailing financial headwind. <a href="#appendix-a" class="ref">Appendix A</a></p>
-          <span class="pill lilac"><span class="dot"></span>Macro environment</span>
-        </article>
-
-        <article class="wall reveal d2">
-          <div class="wall-num">04</div>
-          <h3>The SPoA category is fragmented, entrenched and fatigued.</h3>
-          <p>Some ICBs have adopted lighter referral systems (e.g. EyeV) as their Single Point of Access. Others, like Devon, have niche local SPoAs - the Devon Referral Support Service (DRSS) - which are deeply embedded and require integration. CrossCover at Moorfields, Cinapsis and EyeV occupy the rest. <a href="#appendix-d" class="ref">Devon case</a> <a href="#appendix-e" class="ref">Competitors</a></p>
-          <p>Even where Lutra is demonstrably superior, considerable political will has gone into adopting the existing system. Appetite for another big change is minimal.</p>
-          <span class="pill"><span class="dot"></span>Change fatigue</span>
-        </article>
-
-        <article class="wall reveal d2">
-          <div class="wall-num">05</div>
-          <h3>The tender process favours scale, not the firms doing the hard yards.</h3>
-          <p>Even with full stakeholder buy-in, contracts are awarded through tender - where competitors with more existing NHS traction and the relevant compliance certification (ISO 27001, ISO 9001) are structurally advantaged. NHS Wales is the case in point: we did the foundational work; the contract went elsewhere.</p>
-          <span class="pill teal"><span class="dot"></span>Procurement risk</span>
-        </article>
-
-        <article class="wall reveal d2">
-          <div class="wall-num">06</div>
-          <h3>EPR rollouts can override every other signal.</h3>
-          <p>NHS Somerset is the cleanest illustration: clear ROI, ophthalmology buy-in, CEO support - all overridden by a Digital team refusing to entertain new digital projects until <strong>Epic is fully embedded</strong>. That timeline is realistically 2+ years. <a href="#appendix-c" class="ref">Appendix C</a></p>
-          <span class="pill lilac"><span class="dot"></span>Programme freeze</span>
-        </article>
-
-      </div>
+    <div class="figure-cell">
+      <div class="fig-label">Cost avoidance</div>
+      <div class="fig">£379k</div>
+      <div class="fig-desc">Across 1,570 patients (£241.60 per patient in appointment-cost avoidance).</div>
     </div>
-  </section>
-
-  <!-- ========== ROI CALLOUT ========== -->
-  <section class="section-sm">
-    <div class="container">
-      <div class="roi reveal">
-        <div class="roi-num">8&times;<span>ROI</span></div>
-        <div class="roi-text">
-          <h3>Verified outcomes are the foundation, not the finish line.</h3>
-          <p>NHS Business Intelligence has independently verified Lutra's return on investment at greater than 8&times;, and in Tayside that has translated directly into outcomes. Scaling beyond Tayside depends on alignment with national programmes, ICB digital priorities, and EPR rollouts already in flight: timelines that exist for legitimate reasons and run independently of any individual product's value case. Our shift in focus is about building additional adoption channels alongside continued NHS engagement.</p>
-          <a href="#appendix-a" class="ref">See full Tayside case</a>
-        </div>
-      </div>
+    <div class="figure-cell">
+      <div class="fig-label">Verified ROI</div>
+      <div class="fig">8×</div>
+      <div class="fig-desc">Independently verified return on investment by NHS Business Intelligence.</div>
     </div>
-  </section>
-
-  <!-- ========== FOUR NATIONS ========== -->
-  <section class="section bg-bone">
-    <div class="container">
-      <div class="section-head left">
-        <span class="eyebrow">02 / What the nations taught us</span>
-        <h2>Four nations, four versions of the same lesson.</h2>
-        <p>Each devolved health system imposed its own form of structural lock-in. Together they describe the shape of the wider problem: even where there's genuine clinical interest, system-level commitments elsewhere keep the door closed.</p>
-      </div>
-
-      <div class="nations">
-
-        <article class="nation reveal d1">
-          <div class="nation-head">
-            <div>
-              <span class="eyebrow">England</span>
-              <h3>Fragmentation by design.</h3>
-            </div>
-            <span class="status amber">High effort &middot; Low conversion</span>
-          </div>
-          <p>Primary Eyecare Services (PES) sits at the centre of community eye-care commissioning - a pivotal player that's structurally hard to bypass. Beneath that, NHS England is fundamentally fragmented: <strong>each ICB operates differently</strong>.</p>
-          <p>Many have already adopted PES (and its associated digital system for managing optometry referrals). Others run on Cinapsis or EyeV. Either way, the addressable market shrinks ICB by ICB before we get into the room.</p>
-          <div class="nation-foot">
-            <span>Posture: opportunistic, not resource-led</span>
-            <a href="#appendix-d" class="ref">Devon case</a>
-          </div>
-        </article>
-
-        <article class="nation reveal d1">
-          <div class="nation-head">
-            <div>
-              <span class="eyebrow">Wales</span>
-              <h3>Tender process; re-entry planned.</h3>
-            </div>
-            <span class="status blue">Re-entering in &lt; 6 months</span>
-          </div>
-          <p>The first Wales national contract did not land for us - and the process taught us a great deal about ISO requirements and NHS procurement mechanics. The tender is expected to <strong>kick off again in the next six months</strong> and we will apply.</p>
-          <p>Wales remains a real opportunity, but it's a tender-shaped one - won by NHS-track-record and certification posture, not by demonstrated outcomes alone.</p>
-          <div class="nation-foot">
-            <span>Posture: re-apply, with sharper compliance positioning</span>
-          </div>
-        </article>
-
-        <article class="nation reveal d2">
-          <div class="nation-head">
-            <div>
-              <span class="eyebrow">Scotland</span>
-              <h3>National programme commitments in place.</h3>
-            </div>
-            <span class="status red">Programme-locked</span>
-          </div>
-          <p>The <strong>NHS Scotland Innovation Team</strong> was supportive. The constraint sat with NHS Scotland's Centre for Sustainable Delivery - specifically the Ophthalmic Workforce - for two reasons.</p>
-          <p>First, current policy is to direct optometry referrals through <strong>SCI Gateway</strong>. Second, NHS Scotland is actively driving adoption of <strong>OpenEyes</strong>, procured pre-COVID for Scotland-wide rollout under the Once-for-Scotland EPR programme. With those national commitments in place, our Tayside outcomes data was not sufficient on its own to open a parallel route.</p>
-          <div class="nation-foot">
-            <span>Posture: high-effort, low-return; deprioritise</span>
-            <a href="#appendix-b" class="ref">Engagement record</a>
-          </div>
-        </article>
-
-        <article class="nation reveal d2">
-          <div class="nation-head">
-            <div>
-              <span class="eyebrow">Northern Ireland</span>
-              <h3>Recent system changes already in flight.</h3>
-            </div>
-            <span class="status amber">Change-capacity constrained</span>
-          </div>
-          <p>We engaged the lead ophthalmologist and the eye-care delivery lead - the right people, genuinely interested. Northern Ireland has recently adopted <strong>SCI Gateway for optometry referrals</strong> and <strong>Epic as the hospital EPR</strong>, with the integration now live.</p>
-          <p>Despite Lutra's lower cost and broader benefits, the lead ophthalmologist did not want to introduce further system change to her clinical and admin teams during the current transition. Available change capacity, rather than the merits of the product, was the deciding factor.</p>
-          <div class="nation-foot">
-            <span>Posture: hold; revisit when the dust settles</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PIVOT - now introduces LUTRA CONNECT ========== -->
-  <section class="section bg-navy">
-    <div class="container">
-      <div class="section-head left">
-        <span class="eyebrow inverse">03 / Where we're focusing instead</span>
-        <h2>Lutra Connect: the connective layer between optometry and ophthalmology.</h2>
-        <p>A single proposition, two markets. Lutra Connect sits between the systems optometrists already use and the ophthalmology services patients need to reach - private and NHS - with adoption driven by usability and revenue, not mandate.</p>
-      </div>
-
-      <div class="connect-intro reveal">
-        <div>
-          <span class="eyebrow inverse">Introducing</span>
-          <h3>Lutra Connect.</h3>
-          <p>The product proposition for the next phase. A connective layer that lets optometrists send referrals, advice &amp; guidance requests, post-op data and patient information directly into ophthalmology - without changing the systems either side already runs.</p>
-          <p>Lutra Connect is what we sell into optometry practices and into private ophthalmology clinics. NHS opportunities are accommodated through the same platform when and where they arise.</p>
-        </div>
-        <div class="connect-logo-frame" aria-label="Lutra Connect logo">
-          <div class="connect-logo">
-            <div class="connect-logo-mark" aria-hidden="true">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-            <div class="connect-logo-word">lutra connect</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="connective-layer reveal">
-        <div class="connective-layer-head">
-          <span class="eyebrow">The connective layer</span>
-          <h3>One layer between the systems optometry and ophthalmology already use.</h3>
-        </div>
-
-        <div class="connective-diagram">
-          <div class="conn-node">
-            <div class="conn-node-label">Source</div>
-            <h4>Optometry</h4>
-            <p>Practice management systems &amp; the optometrist's existing workflow</p>
-          </div>
-
-          <div class="conn-link" aria-hidden="true">
-            <span class="line"></span>
-            <span class="line"></span>
-          </div>
-
-          <div class="conn-node center">
-            <div class="conn-node-mini-mark" aria-hidden="true">
-              <span class="d"></span>
-              <span class="d"></span>
-            </div>
-            <div class="conn-node-label">Connective layer</div>
-            <h4>Lutra Connect</h4>
-            <p>Referrals, A&amp;G, imaging, post-op, PROMs/PREMs</p>
-          </div>
-
-          <div class="conn-link" aria-hidden="true">
-            <span class="line"></span>
-            <span class="line"></span>
-          </div>
-
-          <div class="conn-node">
-            <div class="conn-node-label">Destination</div>
-            <h4>Ophthalmology</h4>
-            <p>Private EPRs (Semble, Carebit) &amp; NHS hospital systems where in place</p>
-          </div>
-        </div>
-
-        <div class="connective-outcome">
-          <span class="pill">Faster, joined-up patient pathway</span>
-        </div>
-      </div>
-
-      <div class="pivot">
-        <article class="pivot-card reveal d1">
-          <span class="eyebrow inverse">Primary focus 01</span>
-          <h3>Optometry.</h3>
-          <p>Make Lutra Connect the easiest system optometrists use. Adoption driven by reduced friction, reporting that supports commissioned work, and AI that lowers cognitive load - rather than by an NHS mandate that hasn't translated to exhaustive uptake anyway.</p>
-          <ul>
-            <li>Single sign-on, embedded referral forms, faster patient registration</li>
-            <li>Filterable reports, post-op tracking, glaucoma/MECS shared-care reporting, invoice generation</li>
-            <li>PDF ingestion, AI diagnostic assistance, auto-tagging, rule-based routing</li>
-          </ul>
-        </article>
-
-        <article class="pivot-card reveal d2">
-          <span class="eyebrow inverse">Primary focus 02</span>
-          <h3>Private ophthalmology.</h3>
-          <p>Establish Lutra Connect as the de facto system used by private eye hospitals and ophthalmologists for referrals, advice &amp; guidance, post-op pathways and PROMs/PREMs - by integrating with the systems they already run, not replacing them.</p>
-          <ul>
-            <li>Live integrations with Carebit and Semble (the leading private EPR/CRMs)</li>
-            <li>Monetised Rapid Consultant Review - faster than NHS, cheaper than F2F private</li>
-            <li>Enhanced PROMs and pre-op questionnaires; chronic disease support</li>
-          </ul>
-          <a href="#appendix-f" class="ref">Integration status</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CLOSING PRINCIPLE ========== -->
-  <section class="section">
-    <div class="container">
-      <div class="principle reveal">
-        <div class="quote-mark">&ldquo;</div>
-        <h2>If Lutra becomes the <span class="accent">easiest</span> way for optometrists to interact with ophthalmologists - and generates revenue for both - adoption should follow<span class="teal">.</span></h2>
-        <div class="sig">- Strategic principle, 2026/27</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       APPENDICES
-       ============================================================ -->
-
-  <section class="divider-band">
-    <div class="container">
-      <span class="eyebrow inverse">The evidence pack</span>
-      <h2>Appendices - supporting detail.</h2>
-      <p>Six short evidence sections, drawn directly from operational documentation, customer engagement records, verified outcomes data, and competitor correspondence. Provided to substantiate the load-bearing claims in the overview above.</p>
-      <nav class="appendix-nav">
-        <a href="#appendix-a">
-          <div class="label">Appendix A</div>
-          <div class="title">NHS Tayside - outcomes and verified ROI</div>
-        </a>
-        <a href="#appendix-b">
-          <div class="label">Appendix B</div>
-          <div class="title">Scotland - engagement summary and current position</div>
-        </a>
-        <a href="#appendix-c">
-          <div class="label">Appendix C</div>
-          <div class="title">NHS Somerset - engagement and digital programme constraints</div>
-        </a>
-        <a href="#appendix-d">
-          <div class="label">Appendix D</div>
-          <div class="title">NHS Devon - the multi-stakeholder merry-go-round</div>
-        </a>
-        <a href="#appendix-e">
-          <div class="label">Appendix E</div>
-          <div class="title">Competitive landscape - PES, Cinapsis &amp; EyeV</div>
-        </a>
-        <a href="#appendix-f">
-          <div class="label">Appendix F</div>
-          <div class="title">Private market - integration status</div>
-        </a>
-      </nav>
-    </div>
-  </section>
-
-  <!-- ========== APPENDIX A: NHS TAYSIDE ========== -->
-  <section class="appendix" id="appendix-a">
-    <div class="container">
-      <div class="appendix-head">
-        <div class="label">Appendix A &middot; Evidence</div>
-        <h2>NHS Tayside - outcomes and verified ROI.</h2>
-        <p class="summary">Outcomes from a 29-month real-world deployment across the whole of Tayside, covering 1,570 patients and 11 optometry practices, analysed jointly with the <strong>NHS Tayside Business Intelligence team</strong>. This is the dataset that underpins the verified ROI claim throughout the overview.</p>
-      </div>
-
-      <div class="tayside-results">
-        <div class="ts-stat">
-          <div class="figure teal">1,570</div>
-          <div class="label">Total patients</div>
-          <div class="desc">Real-world deployment across NHS Tayside, August 2024 onward.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure">25%</div>
-          <div class="label">Reduction in RTT</div>
-          <div class="desc">Total reduction in referral-to-treatment time vs. SCI Gateway control group.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure">63%</div>
-          <div class="label">Reduction in RTL</div>
-          <div class="desc">Reduction in referral-to-listing time - the front-loaded portion of the pathway.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure navy">&pound;379k</div>
-          <div class="label">Cost avoidance</div>
-          <div class="desc">Across 1,570 patients (&pound;241.60 per patient in appointment-cost avoidance).</div>
-        </div>
-      </div>
-
-      <div class="evidence-grid">
-        <div class="evidence-block">
-          <h4>Methodology &amp; control</h4>
-          <p>A matched-control subgroup of 209 Lutra patients vs. 209 non-Lutra patients (referred via SCI Gateway). Outcomes analysed in collaboration with NHS Tayside Business Intelligence over a 29-month period.</p>
-          <ul>
-            <li><strong>11 optometry practices</strong> participating, including all Specsavers in the region and several independents.</li>
-            <li><strong>Whole-region pilot</strong> covering urban and rural Tayside; 37% of Dundee residents live in Scotland's 20% most deprived areas, demonstrating engagement across digital-inclusion challenges.</li>
-            <li><strong>86% of patients listed directly for surgery</strong>, with 7% telephone consultation and 7% face-to-face.</li>
-          </ul>
-        </div>
-        <div class="evidence-block lilac">
-          <h4>Secondary outcomes</h4>
-          <ul>
-            <li><strong>60% reduction</strong> in appointment utilisation per cataract patient.</li>
-            <li><strong>1.6 fewer outpatient appointments</strong> per cataract patient.</li>
-            <li><strong>42.5 health miles saved</strong> per patient - a measurable carbon-emissions impact.</li>
-            <li><strong>4.7 / 5 patient satisfaction</strong> score on the digital questionnaire.</li>
-            <li><strong>9 / 10 patients</strong> responded to the questionnaire; 86.5% provided a mobile number, 80% an email; only 0.5% had neither.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="evidence-grid">
-        <div class="testimonial">
-          <blockquote>You have made a world class product. Utterly transformative. I cannot praise it enough &hellip; If I imagine full integration into patient booking and post-op follow-up, we will have something that 'just works' all the way from end to end.</blockquote>
-          <div class="attribution">
-            <strong>John Ellis</strong>
-            Consultant Ophthalmologist, NHS Tayside - the best-performing NHS Health Board for cataract.
-          </div>
-        </div>
-        <div class="testimonial lilac">
-          <blockquote>It worked from day one. There weren't any bugs. It's easier to use than the incumbent system and there was zero pain involved in its implementation. It's better for patients, the practitioner, and the hospital eye department.</blockquote>
-          <div class="attribution">
-            <strong>Jamie Buchan</strong>
-            Director of Retail, Specsavers Arbroath
-          </div>
-        </div>
-      </div>
-
-      <div class="verdict">
-        <div class="label">Why this matters for the strategic shift</div>
-        <h4>Strong outcomes, on their own, have not been sufficient to unlock scaled adoption.</h4>
-        <p>Tayside demonstrates that when Lutra is deployed cleanly, with engaged clinical leadership and an unblocked operational route, the outcomes are exceptional and independently verified. The fact that this evidence base - built jointly with NHS Tayside Business Intelligence - has not been sufficient on its own to unlock a Scotland-wide rollout is precisely the structural pattern the overview identifies. Outcomes data is necessary; alone, it is not sufficient to displace existing national programme commitments.</p>
-      </div>
-
-      <a href="#top" class="back-link">Back to overview</a>
-    </div>
-  </section>
-
-  <!-- ========== APPENDIX B: SCOTLAND ========== -->
-  <section class="appendix bone" id="appendix-b">
-    <div class="container">
-      <div class="appendix-head">
-        <div class="label">Appendix B &middot; Evidence</div>
-        <h2>Scotland - engagement summary and current position.</h2>
-        <p class="summary">A four-month engagement with NHS National Services Scotland and the Centre for Sustainable Delivery, captured through the email correspondence record. The constraint sat upstream of product fit: two pre-existing national programmes - <strong>OpenEyes</strong> and <strong>SCI Gateway</strong> - have absorbed the available capacity and funding for the current programme cycle.</p>
-      </div>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Initial response</span>
-            <span class="ti-meta">28 Nov 2025 &middot; NHS National Services Scotland &rarr; Lutra</span>
-          </div>
-          <h4>Submission returned: capacity and funding directed to existing programmes.</h4>
-          <p>Following submission of the Tayside outcomes data via the NHS Scotland innovation portal, the Centre for Sustainable Delivery (CfSD) National Eyecare workstream returned the following response:</p>
-          <div class="quote">
-            The current focus across hospital eye services within NHS Scotland is delivering the Once for Scotland electronic patient record to support patient care. In addition, we are already working on improving and upgrading our optometry referral pathways utilising our nationally adopted referral software &hellip; current capacity and funding is already exhausted.
-            <span class="src">- David Beattie, Innovation Programme Manager, NHS National Services Scotland</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Counter-offer from Lutra</span>
-            <span class="ti-meta">28 Nov 2025 &middot; Eve Corner &rarr; CfSD</span>
-          </div>
-          <h4>A no-upfront-cost gainshare proposal - referencing Tayside outcomes.</h4>
-          <p>Lutra responded with a structured counter-offer designed to remove the funding objection:</p>
-          <div class="quote">
-            The impact from Tayside alone - in terms of appointments released - would pay for the system nationally for a year &hellip; To help overcome funding constraints, a gainshare (shared-savings) approach could be considered. There would be no upfront cost to the Board, and payment would only be linked to verified appointment savings, with the Board retaining the majority of the benefit.
-            <span class="src">- Eve Corner, Commercial Lead, Lutra Health</span>
-          </div>
-          <p>Subsequent correspondence also surfaced the 25% RTT reduction (107 days), 1.6 fewer outpatient appointments per patient (&pound;241.60 pp), and 42.5 health miles saved per patient.</p>
-        </div>
-
-        <div class="timeline-item dark">
-          <div class="ti-head">
-            <span>Confirmed position</span>
-            <span class="ti-meta">20 Jan 2026 &middot; Chief Optometric Adviser to Scottish Government</span>
-          </div>
-          <h4>"Our previous position still holds."</h4>
-          <p>Following the additional Tayside RTT data, the gainshare offer, and clinical advocacy from John Ellis (CfSD task &amp; finish group member), the position was reconfirmed:</p>
-          <div class="quote">
-            Our previous position still holds and we are focused on delivering the Once for Scotland EPR as previously indicated.
-            <span class="src">- Chief Optometric Adviser to the Scottish Government, relayed via NHS NSS</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>OpenEyes contract status</span>
-            <span class="ti-meta">21 Jan 2026 &middot; NHS NSS &rarr; Lutra</span>
-          </div>
-          <h4>The forthcoming re-tender is scoped to OpenEyes maintenance.</h4>
-          <p>In response to a request for visibility on the OpenEyes contract status, NHS National Services Scotland confirmed the following:</p>
-          <div class="quote">
-            NES confirmed that there isn't a separate published contract award notice for OpenEyes as it is open source. The current support / maintenance has been procured by NES through the G-Cloud 13 framework &hellip; As the value of the maintenance element was below the &pound;50,000 threshold, a separate contract award notice was not published on Public Contracts Scotland.
-            <span class="src">- David Beattie, NHS NSS</span>
-          </div>
-          <p>The forthcoming re-tender is scoped to OpenEyes maintenance specifically. As summarised internally:</p>
-          <div class="quote">
-            If the tender is for OpenEyes maintenance there is only one company that can deliver it &hellip; It makes it impossible to change the contract as only one provider can fulfil the service spec.
-            <span class="src">- Charles Solanki / Eve Corner, internal</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="verdict">
-        <div class="label">What this evidence demonstrates</div>
-        <h4>National programme commitments are absorbing the available capacity for this cycle.</h4>
-        <p>The Once-for-Scotland OpenEyes commitment, procured pre-COVID and currently being rolled out, is using the available funding and capacity for digital optometry-to-ophthalmology pathways. The forthcoming re-tender is scoped to OpenEyes maintenance - a category Lutra is not positioned to bid into. This is the canonical example of the SPoA-fragmentation and procurement-misalignment dynamics described in section 01 of the overview.</p>
-      </div>
-
-      <a href="#top" class="back-link">Back to overview</a>
-    </div>
-  </section>
-
-  <!-- ========== APPENDIX C: NHS SOMERSET ========== -->
-  <section class="appendix lilac" id="appendix-c">
-    <div class="container">
-      <div class="appendix-head">
-        <div class="label">Appendix C &middot; Evidence</div>
-        <h2>NHS Somerset - engagement summary and digital programme constraints.</h2>
-        <p class="summary">A worked example of how Trust-level digital prioritisation interacts with new digital procurement during an active EPR rollout. Clinical leadership endorsement, ophthalmology-department buy-in, and a quantified &pound;500k pa opportunity have been recorded; the operational route is currently paused pending the Trust's existing digital programme. Correspondence below is drawn from Somerset NHS Foundation Trust personnel.</p>
-      </div>
-
-      <div class="evidence-grid">
-        <div class="evidence-block">
-          <h4>The opportunity Somerset has identified</h4>
-          <ul>
-            <li><strong>500 cataract referrals per year</strong> currently going to independent-sector providers.</li>
-            <li>Estimated <strong>~&pound;500k pa</strong> of additional ICB spend on top of existing NHS contracts.</li>
-            <li><strong>Five new theatres</strong> coming online with no front-end pathway to absorb the volume.</li>
-            <li>Expected <strong>1,380 outpatient slots / year</strong> released through Lutra's straight-to-treatment model.</li>
-          </ul>
-        </div>
-        <div class="evidence-block lilac">
-          <h4>The internal Lutra positioning</h4>
-          <ul>
-            <li>Annual cost <strong>below standard procurement thresholds</strong>.</li>
-            <li><strong>Implementation fully Lutra-led</strong> - minimal Trust digital / IT involvement.</li>
-            <li><strong>Cloud-based</strong>; no integrations required at this stage.</li>
-            <li>Typical user training under <strong>30 minutes</strong>.</li>
-            <li>Dedicated Digital Transformation Lead absorbing the operational burden.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Stage 1 &middot; Clinical endorsement</span>
-            <span class="ti-meta">6 Jan 2026 &middot; Jonathan Park, outgoing Clinical Service Lead</span>
-          </div>
-          <h4>"An excellent concept &hellip; the Lutra platform also looked very good and user friendly."</h4>
-          <div class="quote">
-            Both the consultant clinical team and the managerial / leadership team felt that the single-point of access was an excellent concept and that the Lutra platform also looked very good and user friendly.
-            <span class="src">- Jonathan Park, Somerset NHS Foundation Trust</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Stage 2 &middot; The pause</span>
-            <span class="ti-meta">12 Jan 2026 &middot; Abigail Robinson, Service Manager</span>
-          </div>
-          <h4>"We do need to pause any progress whilst there are some digital developments within the Trust."</h4>
-          <div class="quote">
-            We are currently working through if we are staying on the same IT system as the Trust, and if we are consolidating our own systems. I'll be in touch in future to discuss if/when we will be able to move forwards.
-            <span class="src">- Abigail Robinson, Somerset NHS Foundation Trust</span>
-          </div>
-        </div>
-
-        <div class="timeline-item dark">
-          <div class="ti-head">
-            <span>Stage 3 &middot; The Trust-wide policy</span>
-            <span class="ti-meta">25 Jan 2026 &middot; Director of Commercial Development &rarr; Operational Leads (internal Trust email seen by Lutra)</span>
-          </div>
-          <h4>The Trust's Digital Projects Team is not currently considering new digital systems.</h4>
-          <p>In an internal Trust email forwarded to Lutra by Royal Devon University Healthcare NHS FT, the Director of Commercial Development at SFT cited prior correspondence from Jim Mills, Solutions Development Manager for the Digital Projects Team:</p>
-          <div class="quote">
-            They have no capacity to accommodate the scoping, procurement, testing, implementation and support of any new digital systems given current workloads, resource restrictions and portfolio / programme schedules. They are simply unable to do another new piece of work like this. It's not just regarding AI-driven solutions - the current stance is applicable to all requests for new digital systems.
-            <span class="src">- Internal SFT correspondence, citing Jim Mills, Digital Projects Team</span>
-          </div>
-          <p>The same email confirmed that any project would require a clinical champion within the Trust and a business case presented to the Digital Projects Prioritisation Group - neither of which would override the current digital-team capacity stance.</p>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Stage 4 &middot; Procurement pathway</span>
-            <span class="ti-meta">26 Mar 2026 &middot; Abigail Robinson, Service Manager</span>
-          </div>
-          <h4>When digital capacity returns, a tender process will also be required.</h4>
-          <div class="quote">
-            This will require a tender process and is something we are discussing with the ICB, but they are also going through some changes currently which means this is still on pause. This is combined with the digital issue but it is the combination which is delaying.
-            <span class="src">- Abigail Robinson, Somerset NHS Foundation Trust</span>
-          </div>
-          <p>Lutra responded confirming presence on the NHS SBS Digital Workplace Solutions framework (via Softcat and Computacenter) - the Trust's procurement specifics are not yet worked through.</p>
-        </div>
-
-      </div>
-
-      <div class="verdict">
-        <div class="label">What this evidence demonstrates</div>
-        <h4>Trust-level digital prioritisation rules are the operative constraint, not product fit.</h4>
-        <p>Clinical interest, managerial endorsement, a clear quantified opportunity, an under-procurement-threshold price point, and a low-touch implementation model are all in place. None of these factors override the Trust's current policy of accepting <em>no new digital systems</em> until Epic is fully embedded - a 2+ year horizon. Combined with a tender requirement once that horizon is reached, the realistic time-to-revenue sits well outside a reasonable startup commercial planning window.</p>
-      </div>
-
-      <a href="#top" class="back-link">Back to overview</a>
-    </div>
-  </section>
-
-  <!-- ========== APPENDIX D: NHS DEVON ========== -->
-  <section class="appendix" id="appendix-d">
-    <div class="container">
-      <div class="appendix-head">
-        <div class="label">Appendix D &middot; Evidence</div>
-        <h2>NHS Devon - the multi-stakeholder merry-go-round.</h2>
-        <p class="summary">The most multi-stakeholder case in this brief. A signed commercial partnership with the host Trust (RDUH), genuine clinical advocacy across multiple departments, and active engagement with the academic research arm have not, over fourteen months, produced a single launched project. Devon is the canonical example of how the structural barriers in section 01 stack: <strong>Trust, ICB, Nightingale and HRC each operate on independent timelines</strong>, and progress requires all of them aligned simultaneously - on top of which sits an embedded local SPoA (DRSS) any operational route would need to integrate with.</p>
-      </div>
-
-      <div class="tayside-results">
-        <div class="ts-stat">
-          <div class="figure">14 months</div>
-          <div class="label">Elapsed since signed agreement</div>
-          <div class="desc">Partnership signed February 2025; no project has launched as of April 2026.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure amber">4</div>
-          <div class="label">Stalled workstreams</div>
-          <div class="desc">RDUH transformation, Nightingale, NHS Devon ICB, HealthTech Research Centre.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure teal">1</div>
-          <div class="label">Signed agreement</div>
-          <div class="desc">Lutra/RDUH partnership term sheet (Feb 2025) - royalties, IP, pilot terms agreed.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure navy">&pound;67k</div>
-          <div class="label">Unused NHSE grant</div>
-          <div class="desc">Grant won in 2021 for the Nightingale post-op pilot; sits in the RDUH account, unspent.</div>
-        </div>
-      </div>
-
-      <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.015em; color: var(--fg-1); margin: 12px 0 18px;">Four parallel workstreams - all stalled</h3>
-
-      <div class="tracks">
-        <div class="track">
-          <span class="track-status">Stalled</span>
-          <h4>RDUH Trust transformation</h4>
-          <p>Partnership agreement signed Feb 2025; Specialist Advice and post-op outcomes pilots agreed in principle, then derailed by mid-year ERF income changes and Transformation team capacity loss.</p>
-          <span class="track-actor">Chris Treloar, Dave Tarbet, Naomi Hooker</span>
-        </div>
-        <div class="track">
-          <span class="track-status">Blocked</span>
-          <h4>Nightingale - PROMs/PREMs</h4>
-          <p>Met repeatedly with the CEE leadership through 2025 and 2026. Two blockers: (1) a parallel Dora pilot already commissioned, and (2) inability to find &pound;5k to start a 12-month PROMs trial.</p>
-          <span class="track-actor">Liz Wilkinson, Polly Budden, Nicola Mathieu, Carly Slade</span>
-        </div>
-        <div class="track">
-          <span class="track-status">Lost interest</span>
-          <h4>NHS Devon ICB - glaucoma pilot</h4>
-          <p>ICB originated the glaucoma referral-refinement concept itself, then - per the consultant lead - "after a few pointless meetings going round in circles they seem now to have lost interest."</p>
-          <span class="track-actor">Rachael Burridge, Gemma Smith, Sam Flynn</span>
-        </div>
-        <div class="track">
-          <span class="track-status">Conditional</span>
-          <h4>HealthTech Research Centre</h4>
-          <p>HRC keen to support an academic evaluation but support is "crucial[ly]" contingent on ICB engagement - which has not materialised. Currently waiting on Conor's return from leave.</p>
-          <span class="track-actor">Rebecca Harper, Michael Smith, Jonathan Loomes-Vrdoljak</span>
-        </div>
-      </div>
-
-      <div class="evidence-grid">
-        <div class="evidence-block">
-          <h4>The signed agreement (Feb 2025)</h4>
-          <p>A formal commercial partnership was negotiated and signed between Lutra Health and Royal Devon University Healthcare NHS Foundation Trust, with Dave Tarbet executing on the Trust side, on the recommendation of Roger Killen (Lutra Investor Director).</p>
-          <ul>
-            <li><strong>Royalty cap of &pound;100k</strong> on Lutra revenue from non-RDUH NHS England Trusts/ICBs (5% of gross), over a 5-year period beginning post-pilot.</li>
-            <li><strong>IP retained by Lutra</strong>; outstanding historical fees of &pound;8k cleared in two tranches.</li>
-            <li><strong>Two pilots agreed in principle</strong>: Nightingale (post-op + PROMs/PREMs, funded from existing &pound;67k NHSE grant) and North Devon (Advice &amp; Guidance).</li>
-          </ul>
-          <p>The agreement was the foundational commercial step: Lutra would partner with RDUH to demonstrate outcomes in Devon, and the Trust would benefit (via royalties) as Lutra scaled across other NHS England Trusts as a result.</p>
-        </div>
-        <div class="evidence-block lilac">
-          <h4>What has actually launched (Apr 2026)</h4>
-          <p><strong>Nothing.</strong> Despite the signed agreement, four stalled workstreams, and active clinical advocates, no Lutra deployment is live in NHS Devon - either at RDUH, Nightingale, or under the ICB. The &pound;67k NHSE grant still sits in the RDUH account, unused.</p>
-          <p>Each workstream has been deferred, paused, or absorbed into another stakeholder's process at least once. None has produced a launched pilot.</p>
-        </div>
-      </div>
-
-      <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.015em; color: var(--fg-1); margin: 36px 0 18px;">The merry-go-round - in their own words</h3>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Feb 2025 &middot; The signed agreement</span>
-            <span class="ti-meta">Lutra &lt;&gt; RDUH partnership term sheet</span>
-          </div>
-          <h4>Partnership signed; two pilots agreed in principle.</h4>
-          <p>Term sheet executed between Lutra Health and RDUH (Dave Tarbet signing). Followed shortly by a forward to the wider RDUH operational team confirming Lutra is ready to "kick off the 2 pilots asap."</p>
-          <div class="quote">
-            To let you know that the commercials are agreed with Lutra now. They are looking to kick off the 2 pilots asap and will be contacting Chris/Naomi to get the detailed specifications and plans in place.
-            <span class="src">- Dave Tarbet (RDUH) &rarr; internal RDUH operational team, Feb 2025</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Mar 2025 &middot; First pull-back</span>
-            <span class="ti-meta">Chris Treloar, Head of Surgery, RDUH</span>
-          </div>
-          <h4>"The financial landscape has massively shifted in a different direction since we met."</h4>
-          <p>Within four weeks of the signed agreement, the RDUH Head of Surgery wrote to flag that the funding model that had supported the Specialist Advice pilot had collapsed:</p>
-          <div class="quote">
-            There is a bit of a problem in that the financial landscape has massively shifted in a different direction since we met &hellip; Regarding Specialist Advice, there will no longer be an income stream via ERF to pay for specialist advice. The lack of income means that there is no funding stream for us to do this.
-            <span class="src">- Chris Treloar, Head of Surgery, RDUH</span>
-          </div>
-          <p>Personally supportive, but operationally constrained. The Nightingale pilot was preserved (the &pound;67k NHSE grant was already in the RDUH account); North Devon Advice &amp; Guidance was paused.</p>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Apr 2025 &middot; Transformation team withdraws</span>
-            <span class="ti-meta">Naomi Hooker, Senior PM, RDUH Transformation</span>
-          </div>
-          <h4>Transformation PM steps off the project hours before kick-off.</h4>
-          <p>The day of the planning meeting (which had been in diaries for two weeks), the assigned Senior Project Manager wrote to confirm she would not attend nor support the project going forward. Her remit was Outpatients Transformation - tied to the (now-cancelled) Specialist Advice element. The wider Transformation Team was simultaneously losing capacity:</p>
-          <div class="quote">
-            I won't be in attendance at the meeting today, nor will I be able to support with this work going forwards &hellip; the team are losing capacity over the next few weeks as a result of people moving onto new roles, so I am unsure if Khalia will be able to provide resources to support with the request. I just want to try and manage expectations.
-            <span class="src">- Naomi Hooker, Senior Project Manager, RDUH Transformation Team</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Apr 2025 &middot; Nightingale blocked by Dora</span>
-            <span class="ti-meta">Polly Budden, Divisional Business Manager, Nightingale</span>
-          </div>
-          <h4>Funded Lutra pilot blocked by parallel Dora trial that's just commenced.</h4>
-          <p>The Nightingale Project Initiation Document went to the divisional team. The response: Nightingale had - days earlier - commenced a 12-month trial of Dora (an alternative tool) covering similar territory. Two trials could not run concurrently at the same site.</p>
-          <div class="quote">
-            We have just commenced a trial with Dora that serves the same purpose, so would not be in a position to run the Lutra trial until that's completed (1 year), so either it would need to wait or the current trial is finished would need to be at an alternative site.
-            <span class="src">- Polly Budden, Divisional Business Manager, Nightingale Hospital Exeter</span>
-          </div>
-          <p>Subsequent meetings explored running Lutra at an alternative Royal Devon site (Axminster). Funding ownership was clarified: the &pound;67k grant sits with WEEU (West of England Eye Unit), not Nightingale specifically - adding another internal-budget stakeholder to the chain.</p>
-        </div>
-
-        <div class="timeline-item dark">
-          <div class="ti-head">
-            <span>Aug &ndash; Nov 2025 &middot; ICB-led re-frame</span>
-            <span class="ti-meta">Rachael Burridge, Head of Elective &amp; Cancer Transformation, NHS Devon ICB</span>
-          </div>
-          <h4>ICB pivots to a new, glaucoma-focused proposal - then loses tangible material to share.</h4>
-          <p>In August 2025, NHS Devon ICB stood down a planned catch-up to "work up a slightly different pilot proposal (glaucoma focused)." High-level direction was a neighbourhood partnership model for glaucoma referral refinement.</p>
-          <p>Three months later (November), with the proposal still not surfaced:</p>
-          <div class="quote">
-            Whilst there are lots of conversations ongoing as part of the programme specification piece, there aren't a lot of tangibles we can share with you as a potential provider at this point &hellip; Gemma Smith &hellip; will be in touch when we have more information we can share (likely to be the New Year).
-            <span class="src">- Rachael Burridge, NHS Devon ICB</span>
-          </div>
-          <p>Through this period, advocacy from Liz Wilkinson (RDUH consultant ophthalmologist and GIRFT National Clinical Lead) reached the ICB on Lutra's behalf. The proposal Lutra had submitted received no formal feedback.</p>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Jan &ndash; Feb 2026 &middot; HRC enters the chain</span>
-            <span class="ti-meta">Rebecca Harper, COO, NIHR HealthTech Research Centre</span>
-          </div>
-          <h4>Academic evaluation arm engages - conditional on ICB support that hasn't arrived.</h4>
-          <p>The HealthTech Research Centre (NIHR-funded, hosted at RDUH) requested a glaucoma-focused submission with detailed questions on Epic integration, ICB support, economic modelling and TRL. Lutra responded with a 952KB substantive document. The HRC met with Michael Smith (Glaucoma Lead, RDUH) and Emily Smale (Ophthalmic Imaging Lead) - both "very excited by the idea."</p>
-          <p>HRC then made support contingent on the ICB:</p>
-          <div class="quote">
-            We see significant value in the project, but we're currently encouraging the ICB to get involved, as their support is crucial. Michael is working on this and will update me soon.
-            <span class="src">- Rebecca Harper, HRC COO &rarr; Lutra, 25 Feb 2026</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Apr 2026 &middot; The ICB has lost interest</span>
-            <span class="ti-meta">Michael Smith, Consultant Ophthalmologist (Glaucoma Lead), RDUH</span>
-          </div>
-          <h4>"After a few pointless meetings going round in circles they seem now to have lost interest!"</h4>
-          <p>The ICB-originated glaucoma project - in the consultant clinical lead's own description:</p>
-          <div class="quote">
-            The initial project (before Lutra was involved) was entirely the ICBs idea in the first place but after a few pointless meetings going round in circles they seem now to have lost interest! I think they are happy for the hospital to do the study though so I think we probably just need to see what Lutra come up with and take things from there.
-            <span class="src">- Michael Smith, Consultant Ophthalmologist (Glaucoma Lead), RDUH</span>
-          </div>
-          <p>The HRC is now waiting on a Lutra clinical co-founder (Conor Ramsden) returning from leave to re-engage Michael Smith and the ICB. As of the date of this brief, no project has launched.</p>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>Mar &ndash; Apr 2026 &middot; Nightingale, still searching</span>
-            <span class="ti-meta">Liz Wilkinson, Clinical Director CEE, RDUH</span>
-          </div>
-          <h4>"We're still looking!"</h4>
-          <p>Eight weeks after Lutra proposed a &pound;5,000 + VAT, 12-month PROMs/PREMs trial at the Nightingale - with a clinical-director-level advocate - the funding remained unfound. Asked whether the &pound;5k could be located:</p>
-          <div class="quote">
-            Polly, can we confirm if it's possible to find &pound;5K down the back of our proverbial sofa? We would really like to have this qualitative feedback opportunity.
-            <span class="src">- Liz Wilkinson, Clinical Director CEE, Nightingale, 25 Mar 2026</span>
-          </div>
-          <p>Status as of late April 2026, in three words from the same clinician: "We're still looking!"</p>
-        </div>
-
-      </div>
-
-      <div class="evidence-block amber" style="margin-top: 36px;">
-        <h4>Beneath all of this: integration with DRSS</h4>
-        <p>None of the email correspondence above explicitly engages with the operational integration layer - but it is sitting underneath every workstream. Devon is one of the ICBs covered in section 01 (Wall 04) as having a niche local Single Point of Access: the <strong>Devon Referral Support Service (DRSS)</strong>.</p>
-        <p>DRSS is treated within the ICB as a separate operational stream - Rachael Burridge's email signature explicitly routes DRSS queries to a dedicated lead (Steve Matson). Even if the political deadlock above were resolved, any operational route from optometry referral into Devon ophthalmology would need to integrate with DRSS - an additional embedded SPoA layer that no other appendix in this brief carries, and that has not yet been opened in any of the engagements above.</p>
-      </div>
-
-      <div class="verdict">
-        <div class="label">What this evidence demonstrates</div>
-        <h4>A signed commercial agreement is not, on its own, an operational route.</h4>
-        <p>Devon is the strongest illustration in this brief of why multi-stakeholder coordination cost (Wall 01) is not a theoretical concern but the dominant operational reality. Trust, Nightingale, ICB, HRC, and the embedded DRSS layer each sit on independent timelines - and progress on any one is regularly absorbed by changes on another. After fourteen months, with a signed partnership agreement, an unspent &pound;67k NHSE grant, an 8&times; verified ROI from Tayside, clinical advocacy across multiple Trust departments, and an academic evaluation arm willing to support, no project has launched. The bottleneck has never been product fit. It has been the structure of the buyer.</p>
-      </div>
-
-      <a href="#top" class="back-link">Back to overview</a>
-    </div>
-  </section>
-
-  <!-- ========== APPENDIX E: COMPETITIVE LANDSCAPE ========== -->
-  <section class="appendix bone" id="appendix-e">
-    <div class="container">
-      <div class="appendix-head">
-        <div class="label">Appendix E &middot; Evidence</div>
-        <h2>Competitive landscape - PES, Cinapsis &amp; EyeV.</h2>
-        <p class="summary">Two distinct categories of competitor close off significant segments of the NHS England optometry market before Lutra reaches the buyer. <strong>Primary Eyecare Services (PES)</strong> - the lead community-eye-care commissioner across many of the highest-acuity ICBs - has decided to build its own platform internally rather than procure. Beneath that, <strong>Cinapsis</strong> and <strong>EyeV</strong> hold incumbent Single-Point-of-Access positions across multiple ICBs that any Lutra rollout would have to displace.</p>
-      </div>
-
-      <!-- ========== PES ========== -->
-      <h3 style="font-family: var(--font-display); font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: var(--fg-1); margin-bottom: 18px;">Primary Eyecare Services (PES) - building in-house, not buying.</h3>
-
-      <div class="tayside-results">
-        <div class="ts-stat">
-          <div class="figure teal">50%+</div>
-          <div class="label">UK optometry reach</div>
-          <div class="desc">Estimated reach of PES-aligned optometry practices nationally if PES adopted Lutra - the prize that's now off the table.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure amber">3</div>
-          <div class="label">Most-active regions</div>
-          <div class="desc">Manchester, Merseyside &amp; Cheshire - where PES is most active and NHS ophthalmology waiting lists are among the highest in England.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure">In-house</div>
-          <div class="label">PES build decision</div>
-          <div class="desc">Engineering team / consultancy hired to build their own core stack; not seeking external supplier.</div>
-        </div>
-        <div class="ts-stat">
-          <div class="figure navy">Held back</div>
-          <div class="label">Equity proposal</div>
-          <div class="desc">We considered proposing an equity stake in Lutra to PES, but they had already begun building their own platform internally, so we decided against pursuing it.</div>
-        </div>
-      </div>
-
-      <div class="evidence-grid">
-        <div class="evidence-block">
-          <h4>Why PES matters strategically</h4>
-          <p>PES is the leading provider of NHS-commissioned community eye services in England. The platform PES adopts effectively becomes the de facto optometry-to-ophthalmology system across a substantial slice of the country.</p>
-          <ul>
-            <li>PES previously contracted <strong>Opera</strong> as its digital backbone - now sunsetting and due to be replaced.</li>
-            <li>Replacing Opera was the natural commercial opening for Lutra; we engaged PES on exactly that basis through 2025.</li>
-            <li>PES has chosen to build its own replacement internally rather than procure from an external supplier.</li>
-            <li>PES's most active regions (Manchester, Merseyside &amp; Cheshire) overlap with the highest NHS ophthalmology waiting lists in England - the territory where downstream impact would be largest.</li>
-          </ul>
-        </div>
-        <div class="evidence-block lilac">
-          <h4>What PES is building</h4>
-          <p>According to the engagement record (December 2025), PES has hired an engineering team / consultancy to build out a core technology stack covering:</p>
-          <ul>
-            <li><strong>Single patient record</strong> - the same foundational layer Lutra has been operating in production.</li>
-            <li><strong>Simple forms for patient communications</strong>.</li>
-            <li><strong>Business intelligence and reporting</strong>.</li>
-            <li><strong>Image sharing</strong>.</li>
-            <li>Strong stated interest in <strong>agentic AI, automated screening &amp; triage</strong>, and <strong>voice interfaces</strong> as future direction.</li>
-            <li>Integration treated as outsourced; specific delivery partners not disclosed.</li>
-          </ul>
-          <p>The stack PES has set out to build is materially the same stack Lutra has already deployed in production at NHS Tayside.</p>
-        </div>
-      </div>
-
-      <h4 style="font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: var(--fg-1); margin: 28px 0 14px;">The engagement record - Dec 2025 to Feb 2026</h4>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>16 Dec 2025 &middot; PES position relayed</span>
-            <span class="ti-meta">Omar Daniel (Lutra advisor) &rarr; Charles Solanki, summarising PES CEO Dharmesh Patel's view</span>
-          </div>
-          <h4>PES CEO's reading of Lutra after a brief demo six months prior.</h4>
-          <p>Following a meeting with Dharmesh Patel (PES CEO), Omar Daniel (Lutra advisor at Harbr) summarised four headline reservations:</p>
-          <div class="quote">
-            Led by ophthalmologists, and you can tell from the product. They have not thought about optometrists user experience &hellip; They have assumed the product will be adopted by acute trusts, but underestimate challenges with adoption of new IT systems &hellip; They are building what already exists. Unclear differentiation or value prop &hellip; Thought about investing but couldn't figure it out.
-            <span class="src">- Dharmesh Patel's view, summarised by Omar Daniel, 16 Dec 2025</span>
-          </div>
-          <p>The same note confirmed PES is running its own internal build programme covering single patient record, forms, BI/reporting and image sharing - effectively the Lutra product surface area. PES had stated interest in agentic AI, automated triage and voice interfaces as forward direction.</p>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>17 Dec 2025 &middot; Lutra response</span>
-            <span class="ti-meta">Charles Solanki &rarr; Omar Daniel, internal team copied</span>
-          </div>
-          <h4>Lutra rebuttal: optometry input from day one, plus an 8&times; verified case the critique doesn't account for.</h4>
-          <p>Lutra's response addressed each point in turn:</p>
-          <ul style="list-style: none; padding: 0; margin: 12px 0;">
-            <li style="display: flex; gap: 10px; padding: 6px 0; font-size: 14.5px; line-height: 1.5; color: var(--fg-2);"><span style="width: 5px; height: 5px; border-radius: 999px; background: var(--lutra-teal); margin-top: 9px; flex-shrink: 0;"></span><span><strong style="color: var(--fg-1);">Optometry involvement:</strong> v1.0 was built with input from multiple Scottish optometrists and Lutra's optometry advisor David O'Sullivan (Chief Optometric Advisor to the Welsh Government). A recent Posthog survey returned a 4.13 / 5 optometrist satisfaction score. Specsavers integration with Socrates was confirmed contingent on a 30-practice threshold - not on willingness to integrate.</span></li>
-            <li style="display: flex; gap: 10px; padding: 6px 0; font-size: 14.5px; line-height: 1.5; color: var(--fg-2);"><span style="width: 5px; height: 5px; border-radius: 999px; background: var(--lutra-teal); margin-top: 9px; flex-shrink: 0;"></span><span><strong style="color: var(--fg-1);">Acute trust adoption:</strong> three years of structured engagement, full deployment in Tayside, joint outcomes work with NHS Tayside Business Intelligence, an Implementation Lead in post; EPR integration is a separate timeline issue (NHS digital teams, not Lutra capacity).</span></li>
-            <li style="display: flex; gap: 10px; padding: 6px 0; font-size: 14.5px; line-height: 1.5; color: var(--fg-2);"><span style="width: 5px; height: 5px; border-radius: 999px; background: var(--lutra-teal); margin-top: 9px; flex-shrink: 0;"></span><span><strong style="color: var(--fg-1);">"Building what already exists":</strong> the stack PES described as its own internal build mirrors what Lutra is already running in production - making the "no differentiation" critique logically inconsistent with the parallel build decision.</span></li>
-            <li style="display: flex; gap: 10px; padding: 6px 0; font-size: 14.5px; line-height: 1.5; color: var(--fg-2);"><span style="width: 5px; height: 5px; border-radius: 999px; background: var(--lutra-teal); margin-top: 9px; flex-shrink: 0;"></span><span><strong style="color: var(--fg-1);">Investment route:</strong> a PES investment was characterised as a potential "unfair advantage" - capable of unlocking 50%+ UK optometry reach overnight. Governance concerns from PES's Opera experience could be addressed via a Lutra board seat for Dharmesh.</span></li>
-          </ul>
-          <p>The exchange also surfaced a structural observation: the PES CEO had seen only a brief demo six months prior to forming the view above.</p>
-        </div>
-
-        <div class="timeline-item dark">
-          <div class="ti-head">
-            <span>4 Feb 2026 &middot; Counter-proposal drafted</span>
-            <span class="ti-meta">Omar Daniel &rarr; Lutra team</span>
-          </div>
-          <h4>An equity offer designed to convert competition into partnership.</h4>
-          <p>With direct partnership unlikely under the prevailing PES position, Omar Daniel set out a structured counter-proposal designed to be put to the PES board:</p>
-          <div class="quote">
-            Lutra would like to offer equity to PES, a board role, and rights to the UK market, while Lutra focusses internationally &hellip; PES can scale a ready made solution rapidly across the UK market. This reduces software development risks, and PES go-to-market timeline.
-            <span class="src">- Omar Daniel, 4 Feb 2026</span>
-          </div>
-          <p>The proposal also identified two PES board members likely to be receptive (Karen Bass - commercial; Fionnuala Stott - optometry-first), and suggested a tabled discussion at the eye-care event on 28 February. A draft proposal pack was shared between Charles Solanki and Omar Daniel on 11 February 2026.</p>
-        </div>
-
-        <div class="timeline-item">
-          <div class="ti-head">
-            <span>11 Feb 2026 &middot; Draft proposal in circulation</span>
-            <span class="ti-meta">Lutra Health - PES Proposal DRAFT.pdf (3.4MB)</span>
-          </div>
-          <h4>Position as of date of this brief: drafted, not converted.</h4>
-          <p>A draft PES proposal pack was assembled and circulated for advisor comment. As of the date of this brief, the proposal has not been formally tabled or accepted, and PES's stated direction remains internal build.</p>
-        </div>
-
-      </div>
-
-      <div class="verdict">
-        <div class="label">What this evidence demonstrates</div>
-        <h4>The single largest NHS England optometry distribution channel has chosen to build, not buy.</h4>
-        <p>PES is not a product-fit blocker, it is a structural one. Their decision to build internally closes off the most material commercial path into NHS England community optometry referrals. We considered an equity-led partnership but, given PES's internal-build trajectory, decided not to pursue it. This is the canonical example of a competitor outcome that no amount of product improvement on Lutra's side could have changed, and is a primary reason the strategic shift toward optometry-led pull and private ophthalmology is necessary.</p>
-      </div>
-
-      <!-- ========== CINAPSIS / EYEV ========== -->
-      <h3 style="font-family: var(--font-display); font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: var(--fg-1); margin: 56px 0 18px;">Cinapsis &amp; EyeV - incumbent SPoA platforms holding ICB territory.</h3>
-
-      <p style="font-size: 16px; line-height: 1.6; color: var(--fg-2); margin-bottom: 24px; max-width: 64ch;">A second category of competitor sits one layer below PES: the incumbent Single-Point-of-Access platforms operating across NHS England. Where PES closes off market access through its commissioning role, Cinapsis and EyeV close it off ICB by ICB through embedded operational deployments. Replacing them at any given ICB requires displacing a system in active use - the &ldquo;change fatigue&rdquo; dynamic described in Wall 04 of the overview.</p>
-
-      <div class="evidence-grid">
-        <div class="evidence-block">
-          <h4>Cinapsis</h4>
-          <p><strong>Profile.</strong> Multi-specialty advice &amp; guidance and clinical-messaging platform. Used across primary care for secure photo-sharing referrals, A&amp;G messaging, and triage routing - not eye-care-specific, which is both a strength (broader installed base) and a constraint (less optimised for ophthalmic workflow).</p>
-          <p><strong>Footprint.</strong> Deployed across multiple NHS England ICBs as the primary A&amp;G and referral-messaging tool, including in regions where ophthalmology shares the platform with dermatology, ENT and other specialties. The company is well-funded and has been a consistent winner of multi-specialty A&amp;G procurements.</p>
-          <p><strong>Implication for Lutra.</strong> In any ICB where Cinapsis is the default A&amp;G layer, displacing it for ophthalmology-only would mean asking the ICB to fragment its A&amp;G estate - a hard ask without overwhelming clinical pull.</p>
-        </div>
-        <div class="evidence-block">
-          <h4>EyeV</h4>
-          <p><strong>Profile.</strong> Eye-care-specific optometry-to-ophthalmology referral platform. Narrower scope than Cinapsis, but more directly competitive with Lutra's core. Often adopted as an ICB's specific Single Point of Access for community optometry referrals into hospital ophthalmology.</p>
-          <p><strong>Footprint.</strong> Live as the SPoA in a number of NHS England ICBs covering community-optometry referrals into hospital eye services. EyeV's lighter functional footprint relative to Lutra has historically been part of its appeal - it is easier to roll in quickly, though without the outcomes-data and post-op-pathway capabilities Lutra offers.</p>
-          <p><strong>Implication for Lutra.</strong> EyeV is the most direct head-to-head we encounter at the ICB SPoA level. Where it is already in place, the procurement question is no longer whether to adopt a digital optometry referral system - that question has been answered - but whether to switch.</p>
-        </div>
-      </div>
-
-      <div class="note amber">
-        <strong>Caveat - specific tender awards to be verified:</strong> a definitive list of NHS England ICB tenders awarded to Cinapsis and EyeV is not reproduced here. Specific award notices, ICBs and date windows should be cross-referenced against <strong>Contracts Finder</strong> and <strong>Find a Tender Service</strong> before this section is used externally. The general positioning above (multi-ICB Cinapsis A&amp;G coverage; multiple-ICB EyeV SPoA coverage) is well established; the precise list of ICBs and award values requires verification.
-      </div>
-
-      <div class="verdict">
-        <div class="label">What this evidence demonstrates</div>
-        <h4>Two competitor categories, both closing doors before product fit is the question.</h4>
-        <p>PES at the commissioning layer and Cinapsis &amp; EyeV at the SPoA layer together account for a substantial portion of the NHS England addressable market for community-optometry-to-ophthalmology referrals. Combined with the national-programme commitments documented in Scotland (Appendix B), the EPR-rollout freeze pattern documented in Somerset (Appendix C), and the multi-stakeholder coordination cost documented in Devon (Appendix D), the picture is consistent: <strong>the doors that are closed in the NHS England market are not closed because of Lutra's product</strong>. They are closed because of decisions taken by other parties before Lutra arrives in the room.</p>
-      </div>
-
-      <a href="#top" class="back-link">Back to overview</a>
-    </div>
-  </section>
-
-  <!-- ========== APPENDIX F: PRIVATE MARKET ========== -->
-  <section class="appendix lilac" id="appendix-f">
-    <div class="container">
-      <div class="appendix-head">
-        <div class="label">Appendix F &middot; Status</div>
-        <h2>Private market - integration status &amp; commercial work in flight.</h2>
-        <p class="summary">Where Lutra Connect stands across the optometry-side ecosystem (PMS and diagnostic equipment partners) and the ophthalmology-side EPR/CRM platforms it integrates into, plus the work currently outstanding on financial projections for the optometry and private-ophthalmology markets.</p>
-      </div>
-
-      <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.015em; color: var(--fg-1); margin-bottom: 18px;">Optometry-side - PMS &amp; diagnostic ecosystem</h3>
-
-      <div class="evidence-grid">
-        <div class="evidence-block">
-          <h4>Ocuco / Acuitas 3 - partnership signed</h4>
-          <p>A <strong>partnership agreement has been signed with Ocuco</strong> for Lutra Connect to be available as a plugin on the Ocuco marketplace for <strong>Acuitas 3</strong>, Ocuco's market-leading practice management system.</p>
-          <p>Acuitas 3 is being deployed across Ocuco's enterprise client base - including <strong>Asda</strong> - which gives Lutra Connect a credible distribution route into a large segment of UK optometry without needing each practice group to procure separately.</p>
-          <p>This addresses the double-keying objection that has historically been a sticking point with optometrists: with the Acuitas 3 plugin live, optometrists can launch Lutra Connect from within the system they already use day-to-day.</p>
-        </div>
-
-        <div class="evidence-block">
-          <h4>Topcon Harmony - talks in progress</h4>
-          <p>Initial conversations have begun with <strong>Topcon</strong> on integrating Lutra Connect with <strong>Topcon Harmony</strong> - the data-management platform used alongside Topcon's diagnostic imaging equipment in optometry practices.</p>
-          <p>Discussions also include Lutra joining the <strong>Topcon Innovation Accelerator</strong>, which would give us a structured route into Topcon's developer ecosystem and broader visibility with Topcon-equipped practices.</p>
-          <p>Early stage; no formal agreement yet. Strategic value sits in being directly downstream of OCT and other diagnostic data captured in the optometry chair.</p>
-        </div>
-      </div>
-
-      <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.015em; color: var(--fg-1); margin: 36px 0 18px;">Ophthalmology-side - EPR / CRM</h3>
-
-      <div class="evidence-grid">
-        <div class="evidence-block">
-          <h4>Semble - live integration</h4>
-          <p>The integration with Semble is <strong>live</strong>. Semble is the most widely used EPR among private ophthalmologists and consulting groups, and the integration enables Lutra Connect to act as the optometry-facing front end into existing Semble-based practices without requiring them to change their underlying system.</p>
-          <p>This is the route by which optometrist-driven referrals, advice &amp; guidance, and Rapid Consultant Review can flow directly into a private clinic's existing patient record.</p>
-        </div>
-
-        <div class="evidence-block">
-          <h4>Carebit - integration in scoping</h4>
-          <p>Movement with Carebit has been <strong>slower</strong>. The principal technical constraint is that Carebit does not currently expose an open API, which materially raises the cost and complexity of integration relative to Semble.</p>
-          <p>Carebit is used by a number of high-value private surgical providers, so the integration remains strategically important - but the timeline is dependent on either Carebit's API roadmap or a bilateral integration arrangement.</p>
-        </div>
-      </div>
-
-      <div class="note">
-        <strong>Outstanding work for the next investor pack:</strong> financial projections for the optometry and private-ophthalmology markets are not yet included in this briefing and are being worked up separately. We will share these as a standalone document once modelled.
-      </div>
-
-      <a href="#top" class="back-link">Back to overview</a>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="site-footer">
-    <div class="container site-footer-inner">
-      <a class="brand" href="#top" aria-label="Lutra Health">
-        <svg class="brand-logo" viewBox="0 0 911.5 273.9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <path class="lh-mark" d="M79.2,194.6V86.7h13v95h48.3v12.9H79.2z"/>
-          <path class="lh-mark" d="M145.5,165.3v-47.8h12.9v44.9c0,3.9,1,7.5,2.9,10.6c1.9,3.2,4.5,5.7,7.7,7.6c3.2,1.9,6.7,2.8,10.6,2.8 c3.9,0,7.4-0.9,10.6-2.8c3.2-1.9,5.7-4.4,7.6-7.6c1.9-3.2,2.9-6.7,2.9-10.6v-44.9h13l0.1,77.1h-13l-0.1-9.8 c-2.7,3.6-6.2,6.5-10.3,8.6c-4.2,2.1-8.7,3.2-13.5,3.2c-5.8,0-11-1.4-15.8-4.2c-4.8-2.8-8.5-6.6-11.3-11.3 C146.9,176.4,145.5,171.1,145.5,165.3z"/>
-          <path class="lh-mark" d="M265.9,130.5h-17.5l-0.1,64.1h-13l0.1-64.1h-13.3v-12.9h13.3l-0.1-24.2h13l0.1,24.2h17.5V130.5z"/>
-          <path class="lh-mark" d="M276.6,194.6v-77.1h12.9v9.6c2.7-3.6,6.2-6.5,10.3-8.6c4.2-2.1,8.7-3.2,13.6-3.2c3,0,5.9,0.4,8.6,1.2l-5.2,12.9 c-2.1-0.7-4.2-1-6.2-1c-3.9,0-7.4,0.9-10.6,2.8c-3.2,1.9-5.8,4.4-7.7,7.6c-1.9,3.2-2.9,6.7-2.9,10.6v45.1H276.6z"/>
-          <path class="lh-mark" d="M386.6,117.5h12.9v77.1h-12.9l-0.5-13c-2.4,4.5-5.7,8.1-10,10.9c-4.2,2.8-9.3,4.2-15.1,4.2 c-5.7,0-10.9-1.1-15.9-3.2c-4.9-2.1-9.3-5.1-13.1-8.9c-3.8-3.8-6.7-8.1-8.8-13.1c-2.1-4.9-3.2-10.3-3.2-16c0-5.5,1-10.7,3.1-15.6 c2.1-4.9,4.9-9.2,8.6-12.8c3.7-3.7,7.9-6.6,12.8-8.6c4.8-2.1,10-3.1,15.6-3.1c6.1,0,11.4,1.4,16,4.3c4.6,2.9,8.3,6.5,11.1,11.1 L386.6,117.5z M360.7,184c5.1,0,9.5-1.2,13.2-3.7c3.7-2.5,6.6-5.9,8.6-10.1c2-4.3,3-9,3-14.1c0-5.2-1-10-3.1-14.2 c-2.1-4.2-4.9-7.6-8.7-10.1c-3.7-2.5-8.1-3.7-13.1-3.7c-5.1,0-9.7,1.3-13.9,3.8c-4.2,2.5-7.5,5.9-9.9,10.1c-2.4,4.2-3.7,9-3.7,14.1 c0,5.2,1.3,9.9,3.8,14.1c2.5,4.2,5.9,7.6,10,10.1C351.2,182.8,355.7,184,360.7,184z"/>
-          <path class="lh-accent" d="M482.1,86.7H495v107.9h-12.9v-51.3h-53.4v51.3h-12.9V86.7h12.9v43.6h53.4V86.7z"/>
-          <path class="lh-accent" d="M546.8,196.6c-7.1,0-13.6-1.8-19.4-5.5c-5.8-3.6-10.5-8.5-14-14.7c-3.5-6.1-5.2-12.9-5.2-20.4 c0-5.7,1-10.9,3-15.8c2-4.9,4.8-9.2,8.3-12.9c3.5-3.7,7.6-6.6,12.3-8.7c4.7-2.1,9.7-3.2,15-3.2c5.8,0,11.1,1.2,16,3.5 c4.9,2.3,9,5.6,12.5,9.8c3.5,4.2,6.1,9,7.8,14.5c1.7,5.5,2.4,11.4,1.9,17.7h-62.9c0.6,4.4,2.1,8.3,4.3,11.7c2.3,3.4,5.2,6.1,8.7,8.1 c3.5,2,7.4,3,11.8,3.1c4.6,0,8.8-1.2,12.6-3.6c3.8-2.4,6.8-5.7,9.1-9.8l13.2,3.1c-3.1,6.8-7.7,12.4-14,16.8 C561.5,194.4,554.5,196.6,546.8,196.6z M521.7,150.6h50.3c-0.4-4.3-1.8-8.3-4.2-11.8c-2.4-3.6-5.4-6.4-9-8.6 c-3.6-2.2-7.6-3.2-11.9-3.2s-8.3,1.1-11.9,3.2c-3.6,2.1-6.6,4.9-8.9,8.5C523.7,142.2,522.2,146.2,521.7,150.6z"/>
-          <path class="lh-accent" d="M662.6,117.5h12.9v77.1h-12.9l-0.5-13c-2.4,4.5-5.7,8.1-10,10.9c-4.2,2.8-9.3,4.2-15.1,4.2 c-5.7,0-10.9-1.1-15.9-3.2c-4.9-2.1-9.3-5.1-13.1-8.9c-3.8-3.8-6.7-8.1-8.8-13.1c-2.1-4.9-3.2-10.3-3.2-16c0-5.5,1-10.7,3.1-15.6 c2.1-4.9,4.9-9.2,8.6-12.8c3.7-3.7,7.9-6.6,12.8-8.6c4.8-2.1,10-3.1,15.6-3.1c6.1,0,11.4,1.4,16,4.3c4.6,2.9,8.3,6.5,11.1,11.1 L662.6,117.5z M636.7,184c5.1,0,9.5-1.2,13.2-3.7c3.7-2.5,6.6-5.9,8.6-10.1c2-4.3,3-9,3-14.1c0-5.2-1-10-3.1-14.2 c-2.1-4.2-4.9-7.6-8.7-10.1c-3.7-2.5-8.1-3.7-13.1-3.7c-5.1,0-9.7,1.3-13.9,3.8c-4.2,2.5-7.5,5.9-9.9,10.1c-2.4,4.2-3.7,9-3.7,14.1 c0,5.2,1.3,9.9,3.8,14.1c2.5,4.2,5.9,7.6,10,10.1C627.2,182.8,631.8,184,636.7,184z"/>
-          <path class="lh-accent" d="M685.6,194.6V79h13v115.6H685.6z"/>
-          <path class="lh-accent" d="M753.8,130.5h-17.5l-0.1,64.1h-13l0.1-64.1h-13.3v-12.9h13.3l-0.1-24.2h13l0.1,24.2h17.5V130.5z"/>
-          <path class="lh-accent" d="M832.7,146.7v47.9h-13v-45.1c0-3.9-1-7.5-2.9-10.6c-1.9-3.2-4.4-5.7-7.6-7.6c-3.2-1.9-6.7-2.8-10.6-2.8 c-3.9,0-7.4,0.9-10.6,2.8c-3.2,1.9-5.8,4.4-7.7,7.6c-1.9,3.2-2.9,6.7-2.9,10.6v45.1h-13V79h13v48.2c2.7-3.6,6.2-6.5,10.3-8.6 c4.2-2.1,8.7-3.2,13.6-3.2c5.8,0,11,1.4,15.8,4.2c4.8,2.8,8.5,6.6,11.3,11.3C831.3,135.6,832.7,140.9,832.7,146.7z"/>
-          <path class="lh-accent" d="M852,196.6c-2,0-3.6-0.7-5-2.1s-2-3.1-2-5.1c0-1.9,0.7-3.5,2-4.9s3-2.1,5-2.1c2,0,3.7,0.7,5.1,2.1 s2.1,3,2.1,4.9c0,2-0.7,3.7-2.1,5.1S854.1,196.6,852,196.6z"/>
-        </svg>
-      </a>
-      <div>Joining Up Eye Care &middot; Confidential and Proprietary &middot; Investor Director only &middot; &copy; Lutra Health Limited 2026</div>
-    </div>
-  </footer>
+  </div>
+
+  <p>Secondary outcomes recorded over the period include a 63 per cent reduction in referral-to-listing time, a 60 per cent reduction in appointment utilisation per cataract patient, 1.6 fewer outpatient appointments per cataract patient, 42.5 health miles saved per patient (a measurable carbon impact), 86 per cent of patients listed directly for surgery and a patient satisfaction score of 4.7 / 5 with a 9-in-10 response rate.</p>
+
+  <h3><span class="sub-num">5.3</span>Clinical endorsement</h3>
+
+  <blockquote>
+    <p>You have made a world class product. Utterly transformative. I cannot praise it enough. If I imagine full integration into patient booking and post-op follow-up, we will have something that 'just works' all the way from end to end.</p>
+    <span class="src">John Ellis, Consultant Ophthalmologist, NHS Tayside, the best-performing NHS Health Board for cataract.</span>
+  </blockquote>
+
+  <blockquote>
+    <p>It worked from day one. There weren't any bugs. It's easier to use than the incumbent system and there was zero pain involved in its implementation. It's better for patients, the practitioner and the hospital eye department.</p>
+    <span class="src">Jamie Buchan, Director of Retail, Specsavers Arbroath.</span>
+  </blockquote>
+
+  <h3><span class="sub-num">5.4</span>Why outcomes alone have not been sufficient</h3>
+  <p>Tayside demonstrates what Lutra can do when deployed cleanly, with engaged clinical leadership and an unblocked operational route. The fact that this evidence base, built jointly with NHS Tayside Business Intelligence, has not been enough on its own to unlock a Scotland-wide rollout is precisely the structural pattern this briefing describes. Outcomes data is necessary; alone, it does not displace national programme commitments. This is the central finding of three years' NHS engagement.</p>
+
+</section>
+
+<!-- ========== 6 THE STRATEGIC SHIFT ========== -->
+<section class="section" id="s6">
+
+  <h2><span class="sec-num">6</span>The strategic shift</h2>
+
+  <h3><span class="sub-num">6.1</span>Reframing</h3>
+  <p>The change is in priority, not in scope. The NHS remains a market that Lutra cares about, has invested in and will continue to engage where opportunities arise through clinical advocates or specific Trusts. What changes is that NHS engagement no longer drives the roadmap or absorbs the bulk of commercial bandwidth. New NHS opportunities are now accommodated alongside the primary markets, not at the centre of them.</p>
+
+  <div class="callout">
+    <p><strong>Strategic principle, 2026/27.</strong> If Lutra becomes the easiest way for optometrists to interact with ophthalmologists, and generates revenue for both, adoption should follow.</p>
+  </div>
+
+  <h3><span class="sub-num">6.2</span>The new primary markets</h3>
+  <p>The new commercial focus is two markets, served by a single platform. The first is UK and international optometry: the company aims to be the easiest system optometrists use to communicate with ophthalmology. The second is private ophthalmology in the UK: Lutra is being established as the de facto referral, Advice &amp; Guidance, post-operative and PROMs/PREMs platform used by private eye hospitals and ophthalmologists, by integrating with the systems they already run rather than replacing them.</p>
+
+  <p>Adoption in both markets is driven by usability and revenue, not by mandate. That alone changes the unit economics of growth.</p>
+
+  <h3><span class="sub-num">6.3</span>The product proposition</h3>
+  <p>Lutra Connect is the product line that serves the new primary markets. It is a secure clinical communication platform connecting optometry practices with vetted ophthalmologists. The flagship service, Advice &amp; Guidance, enables an optometrist to obtain a same-day consultant opinion on a patient case through a structured, audit-logged thread. Around this sit two-way structured referrals, image sharing, post-operative assessment workflows and outcome reporting formatted for the National Ophthalmic Database and PHIN. The full commercial plan for Connect, including pricing, market sizing, defensibility, the integration roadmap and the launch sequence, sits in the Lutra Connect Launch Briefing of the same date.</p>
+
+  <h3><span class="sub-num">6.4</span>Current adoption</h3>
+  <p>Lutra Connect is in commercial use today. As at the date of this paper, thirty optometry practices and five private surgeons are active on the platform, with 80 per cent PROM completion across the post-operative cataract cohort (the industry benchmark for paper or email PROM collection is 30 to 40 per cent).</p>
+
+  <div class="partners">
+    <div class="partners-head">Optometry practices currently active on Lutra Connect</div>
+    <div class="partners-row">Specsavers; Accord Eye Care; Exeter Eye; Medico Management; Devon Eyes; Angus Optix; PLM Optometrists; and twenty-three further independent and group practices.</div>
+  </div>
+
+  <h3><span class="sub-num">6.5</span>Integrations supporting distribution</h3>
+  <p>The integration roadmap is structured to support distribution into both target markets without per-site procurement on the customer side.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 22%;">Status</th>
+        <th>Partner</th>
+        <th>Role in distribution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">Live</td>
+        <td>Semble<span class="sub">Leading private ophthalmology EPR</span></td>
+        <td>Lutra Connect operates as the optometry-facing front end into Semble-based private clinics, without requiring them to change underlying system.</td>
+      </tr>
+      <tr>
+        <td class="label">Signed</td>
+        <td>Ocuco / Acuitas 3<span class="sub">Optometry practice management system</span></td>
+        <td>Plugin distribution via the Ocuco marketplace, deployed across Ocuco's enterprise client base including Asda.</td>
+      </tr>
+      <tr>
+        <td class="label">In talks</td>
+        <td>Topcon Harmony<span class="sub">Diagnostic data platform</span></td>
+        <td>Integration with Topcon's diagnostic ecosystem; Innovation Accelerator participation under discussion.</td>
+      </tr>
+      <tr>
+        <td class="label">In talks</td>
+        <td>Medisoft<span class="sub">NHS-side ophthalmology EHR</span></td>
+        <td>NHS Trust-side distribution route where ophthalmology departments use Medisoft.</td>
+      </tr>
+      <tr>
+        <td class="label">In talks</td>
+        <td>Compucare / Streets Heaver<span class="sub">Private hospital PAS</span></td>
+        <td>Distribution into private hospitals running Compucare for patient administration.</td>
+      </tr>
+      <tr>
+        <td class="label">In talks</td>
+        <td>Carebit<span class="sub">Private ophthalmology EPR</span></td>
+        <td>Strategically important but slower because Carebit does not currently expose an open API.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3><span class="sub-num">6.6</span>What changes operationally</h3>
+  <p>Commercial execution moves to the founding team, for speed, clarity and tight feedback between sales and product. Product roadmap priorities are now driven by friction, cognitive load and revenue at the clinician end, rather than by NHS procurement requirements. The NHS-specific compliance work continues in parallel (ISO 27001, ISO 9001) but is sized against the Wales re-tender window rather than as a precondition for primary market entry.</p>
+
+</section>
+
+<!-- ========== 7 COMPANION BRIEF ========== -->
+<section class="section" id="s7">
+
+  <h2><span class="sec-num">7</span>Companion brief and outstanding work</h2>
+
+  <p>This briefing should be read alongside the Lutra Connect Launch Briefing of the same date (Version 1.2, 13 May 2026). The relationship between the two papers is as follows.</p>
+
+  <p>This document sets out the rationale for the strategic shift, the engagement record that supports it and the outstanding NHS-side positions. The Lutra Connect Launch Briefing covers the positive commercial plan: the product, pricing, market sizing, defensibility, integration roadmap and the phased launch sequence for May through October 2026. Where this document cites a number on current adoption, pricing or the launch calendar, the authoritative version sits in the Connect briefing.</p>
+
+  <p>Two pieces of work referenced in this paper are not yet complete. First, formal financial projections for the optometry and private ophthalmology markets are being modelled separately and will be issued as Appendix F or as a standalone pack once cohort data from the early launch period is in hand. Working market-sizing figures and a target SOM range appear in the Connect briefing (Section 5). Second, the ISO 27001 / 9001 certification decision is open (Section 8); the cost-benefit pivots on the Wales re-tender timing.</p>
+
+</section>
+
+<!-- ========== 8 OPEN QUESTIONS ========== -->
+<section class="section" id="s8">
+
+  <h2><span class="sec-num">8</span>Open questions and parked items</h2>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 26%;">Item</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">ISO 27001 / 9001 certification</td>
+        <td>Open question. The cost of certification is non-trivial; the benefit is concentrated in the Wales re-tender (within six months) and any future NHS England tender we choose to enter. Decision to be made before the Wales tender window opens.</td>
+      </tr>
+      <tr>
+        <td class="label">Wales re-entry</td>
+        <td>Active. Re-applying within the next six months with sharper compliance positioning and an updated Tayside evidence base.</td>
+      </tr>
+      <tr>
+        <td class="label">Northern Ireland</td>
+        <td>Hold. Revisit after the Epic and SCI Gateway transition settles. No current commercial work.</td>
+      </tr>
+      <tr>
+        <td class="label">NHS Somerset</td>
+        <td>Paused at the Trust's request pending Epic embed (two-plus year horizon). Lutra remains on the relationship; the Trust commits to making contact when there is progress to act on.</td>
+      </tr>
+      <tr>
+        <td class="label">NHS Scotland</td>
+        <td>Parked while the Once-for-Scotland OpenEyes rollout continues. Re-engagement contingent on a change in CfSD position or visible failure of the OpenEyes rollout.</td>
+      </tr>
+      <tr>
+        <td class="label">Devon re-engagement</td>
+        <td>Awaiting Conor Ramsden's return from leave to reopen with Michael Smith (RDUH Glaucoma Lead) and the NHS Devon ICB on the glaucoma referral-refinement concept. HRC support remains conditional on ICB engagement.</td>
+      </tr>
+      <tr>
+        <td class="label">Financial projections</td>
+        <td>Optometry and private ophthalmology projections being modelled separately; to issue as Appendix F or a standalone pack once early cohort data is in hand.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<!-- ============================================================
+     APPENDICES
+     ============================================================ -->
+
+<!-- ========== APPENDIX A : TAYSIDE ========== -->
+<section class="section" id="a-a">
+
+  <h2><span class="sec-num">A</span>Appendix A · NHS Tayside outcomes detail</h2>
+
+  <p>The full outcomes detail behind the eight-times verified return on investment cited throughout the overview. All figures analysed in collaboration with the NHS Tayside Business Intelligence team across a 29-month period (August 2024 onward).</p>
+
+  <h3>Deployment scope</h3>
+  <p>1,570 patients across the whole of Tayside; 11 optometry practices participating including all Specsavers in the region and several independents (Angus Optix, BD Opticians, McConnachie Eyecare, Clelland &amp; Boyd and others). The pilot covered both urban and rural Tayside; 37 per cent of Dundee residents live in Scotland's 20 per cent most deprived areas, which means the engagement figures below were achieved despite material digital-inclusion challenges.</p>
+
+  <h3>Methodology and control</h3>
+  <p>A matched-control subgroup of 209 Lutra patients was compared with 209 non-Lutra patients referred via SCI Gateway. The control group is the operative comparison for the headline RTT and RTL figures.</p>
+
+  <h3>Primary outcomes</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 36%;">Metric</th>
+        <th class="num" style="width: 18%;">Result</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">Reduction in referral-to-treatment time</td>
+        <td class="num">25% (107 days)</td>
+        <td>Lutra patients vs. SCI Gateway matched control.</td>
+      </tr>
+      <tr>
+        <td class="label">Reduction in referral-to-listing time</td>
+        <td class="num">63%</td>
+        <td>The front-loaded portion of the pathway, where most of the gain arises.</td>
+      </tr>
+      <tr>
+        <td class="label">Cost avoidance per patient</td>
+        <td class="num">£241.60</td>
+        <td>Outpatient appointment cost avoided through straight-to-treatment listing.</td>
+      </tr>
+      <tr>
+        <td class="label">Total cost avoidance</td>
+        <td class="num">£379,312</td>
+        <td>Across 1,570 patients.</td>
+      </tr>
+      <tr>
+        <td class="label">Reduction in appointment utilisation per patient</td>
+        <td class="num">60%</td>
+        <td>Driven by direct listing for surgery vs. routine OPA assessment.</td>
+      </tr>
+      <tr>
+        <td class="label">Outpatient appointments saved per patient</td>
+        <td class="num">1.6</td>
+        <td>On the matched-control comparison.</td>
+      </tr>
+      <tr>
+        <td class="label">Health miles saved per patient</td>
+        <td class="num">42.5</td>
+        <td>Measurable carbon impact; relevant to NHS net-zero commitments.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Pre-operative attendance</h3>
+  <p>86 per cent of patients were listed directly for surgery; 7 per cent had a telephone consultation; 7 per cent had a face-to-face appointment.</p>
+
+  <h3>Patient engagement</h3>
+  <p>9 in 10 patients responded to the digital questionnaire, with an average satisfaction score of 4.7 / 5. 86.5 per cent of patients provided a mobile number, 80 per cent provided an email address, and only 0.5 per cent provided neither.</p>
+
+  <h3>What this evidence supports</h3>
+  <p>Tayside is the cleanest example available of what Lutra produces when deployed without operational friction, with senior clinical leadership engaged and a willing optometry network. The fact that this evidence base, built jointly with NHS Tayside Business Intelligence, has not been sufficient on its own to unlock a Scotland-wide rollout is documented in Appendix B.</p>
+
+</section>
+
+<!-- ========== APPENDIX B : SCOTLAND ========== -->
+<section class="section" id="a-b">
+
+  <h2><span class="sec-num">B</span>Appendix B · Scotland engagement record</h2>
+
+  <p>A four-month engagement with NHS National Services Scotland and the Centre for Sustainable Delivery (CfSD), captured through the email correspondence record between November 2025 and January 2026. The block was not a question of product fit, outcomes or value; it was that two pre-existing national programmes (OpenEyes and SCI Gateway) had absorbed the available capacity and funding for the current cycle.</p>
+
+  <h3>Initial response, 28 November 2025</h3>
+  <p>Following submission of the Tayside outcomes data via the NHS Scotland innovation portal, the CfSD National Eyecare workstream returned the following position via the Innovation Programme Manager at NHS National Services Scotland:</p>
+
+  <blockquote>
+    <p>The current focus across hospital eye services within NHS Scotland is delivering the once for Scotland electronic patient record to support patient care. In addition, we are already working on improving and upgrading our optometry referral pathways utilising our nationally adopted referral software, a package adopted across primary care contractors in health. We will certainly be exploring other options in the future, but current capacity and funding is already exhausted.</p>
+    <span class="src">David Beattie, Innovation Programme Manager, NHS National Services Scotland, 28 November 2025.</span>
+  </blockquote>
+
+  <h3>Lutra counter-offer, same day</h3>
+  <p>Lutra responded with a structured counter-offer designed to remove the funding objection:</p>
+
+  <blockquote>
+    <p>The impact from Tayside alone, in terms of appointments released, would pay for the system nationally for a year. To help overcome funding constraints, a gainshare (shared-savings) approach could be considered. There would be no upfront cost to the Board, and payment would only be linked to verified appointment savings, with the Board retaining the majority of the benefit.</p>
+    <span class="src">Eve Corner, Commercial Lead, Lutra Health, 28 November 2025.</span>
+  </blockquote>
+
+  <p>Subsequent correspondence in December 2025 surfaced the 25 per cent RTT reduction (107 days), the 1.6 fewer outpatient appointments per patient (£241.60 per patient), and the 42.5 health miles saved per patient.</p>
+
+  <h3>Confirmed position, 20 January 2026</h3>
+  <p>Despite the additional outcomes data, the gainshare offer and clinical advocacy from John Ellis (a CfSD task &amp; finish group member), the position was reconfirmed:</p>
+
+  <blockquote>
+    <p>Our previous position still holds and we are focused on delivering the Once for Scotland EPR as previously indicated.</p>
+    <span class="src">Chief Optometric Adviser to the Scottish Government, relayed via NHS NSS, 20 January 2026.</span>
+  </blockquote>
+
+  <h3>OpenEyes contract investigation, 21 January 2026</h3>
+  <p>Pressed for visibility on the OpenEyes contract status, NHS National Services Scotland confirmed the procurement is structurally closed to new entrants:</p>
+
+  <blockquote>
+    <p>NES confirmed that there isn't a separate published contract award notice for OpenEyes as it is open source. The current support / maintenance has been procured by NES through the G-Cloud 13 framework, under Support and Maintenance Agreement ID: RM1557.14. As the value of the maintenance element was below the £50,000 threshold, a separate contract award notice was not published on Public Contracts Scotland. To date, all OpenEyes-related services in NHS Scotland have been procured via the G-Cloud framework, but to ensure open and transparent procedures and to re-engage the marketplace, NES is planning a change in strategy for the next tender.</p>
+    <span class="src">David Beattie, NHS NSS, 21 January 2026.</span>
+  </blockquote>
+
+  <p>The internal Lutra assessment, captured in correspondence the same afternoon, was that the forthcoming re-tender for OpenEyes maintenance is structurally one that only the OpenEyes maintainer can fulfil; Lutra cannot bid into a maintenance contract for someone else's open-source codebase.</p>
+
+  <h3>What this evidence demonstrates</h3>
+  <p>National programme commitments have absorbed the available capacity for this cycle. The Once-for-Scotland OpenEyes commitment, procured pre-COVID and currently being pushed into adoption, is using the available funding and political bandwidth for digital optometry-to-ophthalmology pathways. The forthcoming re-tender is scoped to OpenEyes maintenance, a category Lutra is not positioned to bid into. This is the canonical example of the SPoA fragmentation and procurement misalignment dynamics described in Section 3.</p>
+
+</section>
+
+<!-- ========== APPENDIX C : SOMERSET ========== -->
+<section class="section" id="a-c">
+
+  <h2><span class="sec-num">C</span>Appendix C · NHS Somerset engagement record</h2>
+
+  <p>A worked example of how Trust-level digital prioritisation interacts with new digital procurement during an active EPR rollout. Clinical leadership endorsement, ophthalmology department buy-in and a quantified £500k per annum opportunity were on the record; the operational route is currently paused pending the Trust's existing digital programme.</p>
+
+  <h3>The opportunity identified by Somerset</h3>
+  <ul>
+    <li>500 cataract referrals per year currently going to independent-sector providers.</li>
+    <li>Estimated £500k per annum of additional ICB spend on top of existing NHS contracts.</li>
+    <li>Five new theatres coming online with no front-end pathway to absorb the volume.</li>
+    <li>Expected 1,380 outpatient slots per year released through Lutra's straight-to-treatment model.</li>
+  </ul>
+
+  <h3>Stage 1: Clinical endorsement, 6 January 2026</h3>
+  <blockquote>
+    <p>Both the consultant clinical team and the managerial / leadership team felt that the single-point of access was an excellent concept and that the Lutra platform also looked very good and user friendly.</p>
+    <span class="src">Jonathan Park, outgoing Clinical Service Lead, Somerset NHS Foundation Trust, 6 January 2026.</span>
+  </blockquote>
+
+  <h3>Stage 2: The pause, 12 January 2026</h3>
+  <blockquote>
+    <p>We do need to pause any progress whilst there are some digital developments within the Trust. We are currently working through if we are staying on the same IT system as the Trust, and if we are consolidating our own systems. I'll be in touch in future to discuss if/when we will be able to move forwards.</p>
+    <span class="src">Abigail Robinson, Service Manager, Somerset NHS Foundation Trust, 12 January 2026.</span>
+  </blockquote>
+
+  <h3>Stage 3: The Trust-wide policy, 25 January 2026</h3>
+  <p>In an internal Trust email forwarded to Lutra by Royal Devon University Healthcare NHS FT, the Director of Commercial Development at SFT cited prior correspondence from the Solutions Development Manager for the Digital Projects Team:</p>
+
+  <blockquote>
+    <p>They have no capacity to accommodate the scoping, procurement, testing, implementation and support of any new digital systems given current workloads, resource restrictions and portfolio / programme schedules. They are simply unable to do another new piece of work like this. It's not just regarding AI-driven solutions, the current stance is applicable to all requests for new digital systems.</p>
+    <span class="src">Internal SFT correspondence citing Jim Mills, Digital Projects Team, 25 January 2026.</span>
+  </blockquote>
+
+  <p>The same email confirmed that any project would require a clinical champion within the Trust and a business case presented to the Digital Projects Prioritisation Group, neither of which would override the current digital-team capacity stance.</p>
+
+  <h3>Stage 4: Procurement layered on top, 26 March 2026</h3>
+  <blockquote>
+    <p>This will require a tender process and is something we are discussing with the ICB, but they are also going through some changes currently which means this is still on pause. This is combined with the digital issue but it is the combination which is delaying.</p>
+    <span class="src">Abigail Robinson, Service Manager, Somerset NHS Foundation Trust, 26 March 2026.</span>
+  </blockquote>
+
+  <p>Lutra responded confirming presence on the NHS SBS Digital Workplace Solutions framework (via Softcat and Computacenter). The Trust's procurement specifics have not yet been worked through.</p>
+
+  <h3>What this evidence demonstrates</h3>
+  <p>Trust-level digital prioritisation rules are the operative constraint, not product fit. Clinical interest, managerial endorsement, a clear quantified opportunity, an under-procurement-threshold price point and a low-touch implementation model are all in place. None of these override the Trust's current policy of accepting no new digital systems until Epic is fully embedded. Combined with a tender requirement once that horizon is reached, the realistic time to revenue sits well outside a reasonable startup commercial planning window.</p>
+
+</section>
+
+<!-- ========== APPENDIX D : DEVON ========== -->
+<section class="section" id="a-d">
+
+  <h2><span class="sec-num">D</span>Appendix D · NHS Devon engagement record</h2>
+
+  <p>The most multi-stakeholder case in this brief. A signed commercial partnership with the host Trust (RDUH), clinical advocacy across multiple departments and active engagement with the academic research arm have not, in fourteen months, produced a single launched project. Devon is the canonical example of how the structural barriers in Section 3 compound when Trust, ICB, Nightingale and HealthTech Research Centre each operate on independent timelines, with the Devon Referral Support Service (DRSS) as an additional embedded SPoA layer that any operational route would need to integrate with.</p>
+
+  <h3>The Royal Devon University Healthcare partnership, February 2025</h3>
+  <p>A formal commercial partnership was negotiated and signed between Lutra Health and Royal Devon University Healthcare NHS Foundation Trust, with Dave Tarbet executing on the Trust side at the recommendation of Roger Killen (Lutra Investor Director). The headline terms were:</p>
+  <ul>
+    <li>A royalty cap of £100k on Lutra revenue from non-RDUH NHS England Trusts and ICBs (5 per cent of gross), over a five-year period beginning post-pilot.</li>
+    <li>IP retained by Lutra; outstanding historical fees of £8k cleared in two tranches.</li>
+    <li>Two pilots agreed in principle: Nightingale (post-op plus PROMs / PREMs, funded from an existing £67k NHSE grant won in 2021) and North Devon (Advice &amp; Guidance).</li>
+  </ul>
+
+  <h3>What has actually launched, April 2026</h3>
+  <p>Nothing. Despite the signed agreement, four workstreams in parallel and active clinical advocates, no Lutra deployment is live in NHS Devon. Each workstream has been deferred, paused or absorbed into another stakeholder's process at least once. The £67k NHSE grant still sits in the RDUH account, unspent.</p>
+
+  <h3>The four stalled workstreams</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 26%;">Workstream</th>
+        <th>Status as at April 2026</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">RDUH Trust transformation</td>
+        <td>Partnership agreement signed Feb 2025. Specialist Advice and post-op outcomes pilots agreed in principle, then derailed by mid-year ERF income changes and Transformation team capacity loss.</td>
+      </tr>
+      <tr>
+        <td class="label">Nightingale, PROMs / PREMs</td>
+        <td>Met with the Centre for Excellence in Eyes (CEE) leadership repeatedly through 2025 and 2026. Two blockers: a parallel Dora pilot already commissioned, and an inability to find £5k to start a 12-month PROMs trial. Status, in the clinical lead's own words: "we're still looking".</td>
+      </tr>
+      <tr>
+        <td class="label">NHS Devon ICB, glaucoma pilot</td>
+        <td>The ICB originated the glaucoma referral-refinement concept itself, then, per the consultant lead Michael Smith: "after a few pointless meetings going round in circles they seem now to have lost interest".</td>
+      </tr>
+      <tr>
+        <td class="label">HealthTech Research Centre</td>
+        <td>HRC keen to support an academic evaluation but support is conditional on ICB engagement, which has not materialised. Currently waiting on Conor Ramsden's return from leave.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Beneath all of this: integration with DRSS</h3>
+  <p>None of the correspondence above engages explicitly with the operational integration layer, but it is sitting underneath every workstream. Devon is one of the ICBs covered in Section 3.4 as having a niche local SPoA: the Devon Referral Support Service (DRSS). DRSS is treated within the ICB as a separate operational stream, routed to a dedicated lead. Even if the political deadlock above were resolved, any operational route from optometry referral into Devon ophthalmology would need to integrate with DRSS as an additional embedded SPoA layer that no other appendix in this brief carries.</p>
+
+  <h3>What this evidence demonstrates</h3>
+  <p>A signed commercial agreement is not, on its own, an operational route. Devon is the strongest illustration in this brief of why multi-stakeholder coordination cost (Section 3.1) is not theoretical but the dominant operational reality. Trust, Nightingale, ICB, HRC and the embedded DRSS layer each sit on independent timelines, and progress on any one is regularly absorbed by changes on another. After fourteen months, with a signed partnership agreement, an unspent £67k NHSE grant, an eight-times verified ROI from Tayside, clinical advocacy across multiple Trust departments and an academic evaluation arm willing to support, no project has launched. The bottleneck has not been product fit.</p>
+
+</section>
+
+<!-- ========== APPENDIX E : COMPETITIVE ========== -->
+<section class="section" id="a-e">
+
+  <h2><span class="sec-num">E</span>Appendix E · Competitive landscape</h2>
+
+  <p>Two distinct categories of competitor close off significant segments of the NHS England optometry market before Lutra reaches the buyer. Primary Eyecare Services (PES) at the commissioning layer; Cinapsis and EyeV as referral systems holding ICB-level territory. None of them is a head-to-head substitute for Lutra Connect's flagship Advice &amp; Guidance workflow, but they materially shape the addressable market.</p>
+
+  <h3>Primary Eyecare Services (PES)</h3>
+  <p>PES is the leading provider of NHS-commissioned community eye services in England. The platform PES adopts effectively becomes the de facto optometry-to-ophthalmology system across a substantial slice of the country. PES previously contracted Opera as its digital backbone, which is now sunsetting and due to be replaced. Replacing Opera was the natural commercial opening for Lutra; the company engaged PES on exactly that basis through 2025.</p>
+
+  <p>PES has chosen to build its own replacement internally rather than procure from an external supplier. According to the December 2025 engagement record, PES has hired an engineering team to build out a core stack covering a single patient record, structured patient communications, business intelligence and image sharing, plus a stated forward direction toward agentic AI, automated screening and triage, and voice interfaces. The stack PES has set out to build is materially the same stack Lutra is already running in production at NHS Tayside.</p>
+
+  <p>Lutra considered offering PES an equity position to convert competition into partnership; the proposal was held back when it became clear PES was already committed to the in-house build path. PES's most active regions (Manchester, Merseyside, Cheshire) overlap with the highest NHS ophthalmology waiting lists in England, which is the territory where downstream impact would have been largest.</p>
+
+  <h3>Cinapsis</h3>
+  <p>A multi-specialty referral and clinical-messaging platform deployed across multiple NHS England ICBs. Cinapsis sits in adjacent territory to Lutra: it handles structured referral messaging and image-sharing, but it is a referral system rather than an Advice &amp; Guidance platform in the sense Lutra uses the term. It does not provide the same-day consultant opinion workflow Lutra Connect is built around. In any ICB where Cinapsis is the default referral layer, displacing it for ophthalmology-only would require asking the ICB to fragment its referral estate, which is a hard ask absent overwhelming clinical pull.</p>
+
+  <h3>EyeV</h3>
+  <p>An eye-care-specific optometry-to-ophthalmology referral platform. Like Cinapsis, EyeV is a referral system rather than an A&amp;G platform. It is often adopted as an ICB's SPoA for community optometry referrals into hospital ophthalmology. EyeV's lighter functional footprint relative to Lutra has historically been part of its appeal: it is easier to roll in quickly, though without the outcomes-data and post-operative-pathway capabilities Lutra offers. EyeV is the most direct head-to-head Lutra encounters at the ICB SPoA level. Where it is already in place, the procurement question is no longer whether to adopt a digital optometry referral system; it is whether to switch.</p>
+
+  <h3>CrossCover, at Moorfields</h3>
+  <p>Operates within Moorfields and surrounding clinical networks. Footprint-limited compared to PES, Cinapsis and EyeV, but materially blocks one of the largest single ophthalmology service catchments in the country.</p>
+
+  <h3>OpenEyes, in Scotland</h3>
+  <p>Open-source EPR procured pre-COVID for Scotland-wide rollout. Not a direct functional competitor to Lutra Connect, but the operative procurement constraint in Scotland (see Appendix B).</p>
+
+  <h3>Important framing distinction</h3>
+  <p>An earlier version of this paper described Cinapsis and EyeV as Advice &amp; Guidance platforms. They are not. They are referral systems. The distinction matters because Lutra Connect's flagship feature is the structured same-day consultant opinion workflow, which neither Cinapsis nor EyeV offers. Cinapsis and EyeV constrain the addressable market for the structured referral component of Lutra Connect; they do not compete with the Advice &amp; Guidance component, which is the commercial spine of the new strategy.</p>
+
+  <h3>What this evidence demonstrates</h3>
+  <p>The doors that are closed in the NHS England market are not closed because of Lutra's product. They are closed because of decisions taken by other parties before Lutra arrives in the room. PES at the commissioning layer, Cinapsis and EyeV at the SPoA layer, OpenEyes in Scotland and CrossCover at Moorfields, taken together with the national-programme commitments in Scotland (Appendix B), the EPR-rollout freeze in Somerset (Appendix C) and the multi-stakeholder coordination cost in Devon (Appendix D), produce a consistent picture. This is a primary reason the strategic shift toward optometry-led pull and private ophthalmology is necessary.</p>
+
+</section>
+
+<!-- ========== APPENDIX F : FINANCIAL ========== -->
+<section class="section" id="a-f">
+
+  <h2><span class="sec-num">F</span>Appendix F · Financial projections (forthcoming)</h2>
+
+  <p>Formal financial projections for the optometry and private ophthalmology markets are being modelled separately and are not included in this version of the paper.</p>
+
+  <p>A working market-sizing view appears in Section 5 of the Lutra Connect Launch Briefing, with TAM, SAM and SOM ranges and an indicative three-year revenue trajectory. The validation mechanism is the launch cohort itself, with the formal projection pack to issue after the September to October 2026 cohort review described in Section 8.3 of the Connect briefing.</p>
+
+  <p>This appendix will be reissued, or replaced by a standalone projection pack, at that point. The version-controlled cross-reference will be added to the Companion section (Section 7) of this briefing when it lands.</p>
+
+</section>
+
+<!-- ========== DOC FOOTER ========== -->
+<div class="doc-footer">
+  <div>Lutra Health · Strictly confidential</div>
+  <div class="ver">Strategic Reset 2026/27 · v2.0 · 13 May 2026</div>
+</div>
+
+</div><!-- /.page -->
+
 </body>
 </html>
