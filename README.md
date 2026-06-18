@@ -2,7 +2,7 @@
 
 Investor-facing HTML briefings, hosted on GitHub Pages.
 
-Live at: https://charles-lutra.github.io/briefings/
+Live at: [https://charles-solanki.github.io/briefings/]
 
 ## Adding a new briefing
 
